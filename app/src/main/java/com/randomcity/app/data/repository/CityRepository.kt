@@ -84,6 +84,13 @@ class CityRepository(
             picked
         }
 
+    /**
+     * Featured 精选城市(v0.7,计划书§35):静态运营推荐,非算法。
+     */
+    suspend fun getFeaturedCities(): List<City> = withContext(Dispatchers.IO) {
+        FEATURED_IDS.mapNotNull { cityDao.getById(it)?.toDomain() }
+    }
+
     fun entityToDomain(entity: CityEntity): City = entity.toDomain()
 
     private fun CityDto.toEntity() = CityEntity(
@@ -150,5 +157,14 @@ class CityRepository(
     companion object {
         const val HISTORY_KEEP = 20
         const val RECENT_EXCLUDE = 10
+
+        /** 精选城市静态名单(运营推荐,风格各异、视觉感强)。 */
+        val FEATURED_IDS = listOf(
+            "kyoto",
+            "santorini",
+            "tbilisi",
+            "queenstown",
+            "marrakech"
+        )
     }
 }
