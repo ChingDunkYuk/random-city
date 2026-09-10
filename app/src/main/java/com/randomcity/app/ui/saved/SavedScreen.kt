@@ -48,7 +48,7 @@ fun SavedScreen(
     Column(modifier = Modifier.fillMaxSize()) {
         Spacer(modifier = Modifier.height(56.dp))
         Text(
-            text = "Saved",
+            text = "收藏",
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(horizontal = 24.dp)

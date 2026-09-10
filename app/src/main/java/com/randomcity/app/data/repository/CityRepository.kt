@@ -9,13 +9,13 @@ import com.randomcity.app.data.model.CityDataSet
 import com.randomcity.app.data.model.CityDto
 import com.randomcity.app.domain.RandomEngine
 import com.randomcity.app.domain.model.City
+import com.randomcity.app.domain.model.CityFilter
 import com.randomcity.app.domain.model.Continent
 import com.randomcity.app.domain.model.RouteDay
 import com.randomcity.app.domain.model.StayArea
 import com.randomcity.app.domain.model.TravelTag
 import com.randomcity.app.domain.model.TravelTip
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -54,18 +54,35 @@ class CityRepository(
     }
 
     /**
-     * 抽一个城市:排除当前城市,写入历史,更新 lastCityId。
-     * 供 Discover / Random Again 共用。
+     * 按筛选条件取候选城市 id(103 城内存过滤,成本可忽略)。
      */
-    suspend fun rollRandomCity(): String? = withContext(Dispatchers.IO) {
-        val ids = cityDao.getAllIds()
-        val last = settings.lastCityId.first()
-        val picked = RandomEngine.pick(ids, excludeIds = setOfNotNull(last)) ?: return@withContext null
-        settings.setLastCityId(picked)
-        historyDao.insert(CityHistoryEntity(cityId = picked, viewedAt = System.currentTimeMillis()))
-        historyDao.trimTo(HISTORY_KEEP)
-        picked
+    suspend fun getFilteredIds(filter: CityFilter): List<String> = withContext(Dispatchers.IO) {
+        if (!filter.isActive) return@withContext cityDao.getAllIds()
+        cityDao.getAll()
+            .map { it.toDomain() }
+            .filter { filter.matches(it) }
+            .map { it.id }
     }
+
+    /**
+     * 抽一个城市(Random Engine v2,计划书§31/§71):
+     * 城市池(筛选 / Surprise 全量)→ 排除最近 10 城 → 随机。
+     * pool 为空返回 null,由 UI 提示放宽筛选。
+     */
+    suspend fun rollRandomCity(filter: CityFilter, surprise: Boolean): String? =
+        withContext(Dispatchers.IO) {
+            val pool = when {
+                surprise -> cityDao.getAllIds()
+                else -> getFilteredIds(filter)
+            }
+            if (pool.isEmpty()) return@withContext null
+            val exclude = historyDao.recentIds(RECENT_EXCLUDE).toSet()
+            val picked = RandomEngine.pick(pool, excludeIds = exclude) ?: return@withContext null
+            settings.setLastCityId(picked)
+            historyDao.insert(CityHistoryEntity(cityId = picked, viewedAt = System.currentTimeMillis()))
+            historyDao.trimTo(HISTORY_KEEP)
+            picked
+        }
 
     fun entityToDomain(entity: CityEntity): City = entity.toDomain()
 
@@ -132,5 +149,6 @@ class CityRepository(
 
     companion object {
         const val HISTORY_KEEP = 20
+        const val RECENT_EXCLUDE = 10
     }
 }

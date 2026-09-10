@@ -4,7 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.randomcity.app.data.repository.CityRepository
 import com.randomcity.app.data.repository.SavedRepository
+import com.randomcity.app.data.repository.SettingsRepository
 import com.randomcity.app.domain.model.City
+import com.randomcity.app.domain.model.CityFilter
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -20,7 +22,8 @@ data class CityResultUiState(
 class CityResultViewModel(
     private val cityId: String,
     private val cityRepository: CityRepository,
-    private val savedRepository: SavedRepository
+    private val savedRepository: SavedRepository,
+    settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(CityResultUiState())
@@ -31,6 +34,9 @@ class CityResultViewModel(
 
     private val _rolling = MutableStateFlow(false)
     val rolling: StateFlow<Boolean> = _rolling.asStateFlow()
+
+    private val filter = settingsRepository.cityFilter
+        .stateIn(viewModelScope, SharingStarted.Eagerly, CityFilter.EMPTY)
 
     init {
         viewModelScope.launch {
@@ -47,17 +53,14 @@ class CityResultViewModel(
         }
     }
 
-    /** Random Again:抽中新城市后回调,由导航替换当前页(计划§17)。 */
+    /** Random Again:应用当前筛选抽新城市,由导航替换当前页(计划§17)。 */
     fun onRandomAgain(onPicked: (String) -> Unit) {
         if (_rolling.value) return
         viewModelScope.launch {
             _rolling.value = true
             try {
-                val picked = cityRepository.rollRandomCity()
-                if (picked != null && picked != cityId) {
-                    onPicked(picked)
-                } else if (picked != null) {
-                    // 池内只剩当前城市时保持原位
+                val picked = cityRepository.rollRandomCity(filter.value, surprise = false)
+                if (picked != null) {
                     onPicked(picked)
                 }
             } finally {

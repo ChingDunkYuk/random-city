@@ -75,7 +75,12 @@ fun RandomCityNavHost(
             val vm: CityResultViewModel = viewModel(
                 key = "city_$cityId",
                 factory = viewModelFactory {
-                    CityResultViewModel(cityId, container.cityRepository, container.savedRepository)
+                    CityResultViewModel(
+                        cityId,
+                        container.cityRepository,
+                        container.savedRepository,
+                        container.settingsRepository
+                    )
                 }
             )
             CityResultScreen(

@@ -21,6 +21,9 @@ interface CityDao {
     @Query("SELECT id FROM cities")
     suspend fun getAllIds(): List<String>
 
+    @Query("SELECT * FROM cities")
+    suspend fun getAll(): List<CityEntity>
+
     @Query("SELECT * FROM cities WHERE id = :id")
     suspend fun getById(id: String): CityEntity?
 }

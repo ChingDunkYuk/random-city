@@ -28,7 +28,7 @@ fun RouteTimeline(route: List<RouteDay>, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         route.forEachIndexed { dayIndex, day ->
             Text(
-                text = "Day ${day.day}",
+                text = "第 ${day.day} 天",
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary,

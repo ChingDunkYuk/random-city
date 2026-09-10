@@ -56,10 +56,10 @@ fun MainScreen(
                             } else {
                                 Icons.Outlined.Explore
                             },
-                            contentDescription = "Discover"
+                            contentDescription = "发现"
                         )
                     },
-                    label = { Text("Discover") }
+                    label = { Text("发现") }
                 )
                 NavigationBarItem(
                     selected = selectedTab == TAB_SAVED,
@@ -71,10 +71,10 @@ fun MainScreen(
                             } else {
                                 Icons.Outlined.FavoriteBorder
                             },
-                            contentDescription = "Saved"
+                            contentDescription = "收藏"
                         )
                     },
-                    label = { Text("Saved") }
+                    label = { Text("收藏") }
                 )
             }
         }
@@ -83,7 +83,9 @@ fun MainScreen(
             when (selectedTab) {
                 TAB_DISCOVER -> {
                     val vm: HomeViewModel = viewModel(
-                        factory = viewModelFactory { HomeViewModel(container.cityRepository) }
+                        factory = viewModelFactory {
+                            HomeViewModel(container.cityRepository, container.settingsRepository)
+                        }
                     )
                     HomeScreen(
                         viewModel = vm,

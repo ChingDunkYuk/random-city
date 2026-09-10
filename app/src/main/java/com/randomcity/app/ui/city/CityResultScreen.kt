@@ -231,7 +231,7 @@ fun CityResultScreen(
             )
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                text = if (rolling) "Rolling..." else "Random Again",
+                text = if (rolling) "抽取中…" else "再抽一个",
                 fontSize = 17.sp,
                 fontWeight = FontWeight.Bold
             )
