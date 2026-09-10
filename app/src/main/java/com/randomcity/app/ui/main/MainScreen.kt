@@ -95,7 +95,9 @@ fun MainScreen(
 
                 TAB_SAVED -> {
                     val vm: SavedViewModel = viewModel(
-                        factory = viewModelFactory { SavedViewModel(container.savedRepository) }
+                        factory = viewModelFactory {
+                            SavedViewModel(container.savedRepository, container.cityRepository)
+                        }
                     )
                     SavedScreen(
                         viewModel = vm,

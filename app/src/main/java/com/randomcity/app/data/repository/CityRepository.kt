@@ -16,9 +16,17 @@ import com.randomcity.app.domain.model.StayArea
 import com.randomcity.app.domain.model.TravelTag
 import com.randomcity.app.domain.model.TravelTip
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+
+/** 历史记录条目(城市 + 浏览时间)。 */
+data class HistoryItem(
+    val city: City,
+    val viewedAt: Long
+)
 
 class CityRepository(
     private val context: Context,
@@ -91,6 +99,12 @@ class CityRepository(
         FEATURED_IDS.mapNotNull { cityDao.getById(it)?.toDomain() }
     }
 
+    /** 浏览历史(v0.8,计划书§38):城市 + 浏览时间,倒序。 */
+    fun observeHistory(): Flow<List<HistoryItem>> =
+        historyDao.observeHistoryWithCity(HISTORY_KEEP).map { list ->
+            list.map { HistoryItem(city = it.city.toDomain(), viewedAt = it.viewedAt) }
+        }
+
     fun entityToDomain(entity: CityEntity): City = entity.toDomain()
 
     private fun CityDto.toEntity() = CityEntity(
@@ -155,7 +169,7 @@ class CityRepository(
     }
 
     companion object {
-        const val HISTORY_KEEP = 20
+        const val HISTORY_KEEP = 100
         const val RECENT_EXCLUDE = 10
 
         /** 精选城市静态名单(运营推荐,风格各异、视觉感强)。 */
