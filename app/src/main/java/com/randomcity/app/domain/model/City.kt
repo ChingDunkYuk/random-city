@@ -29,7 +29,19 @@ data class StayArea(
 data class TravelTip(
     val category: String,
     val text: String
-)
+) {
+    val categoryLabel: String
+        get() = when (category.uppercase()) {
+            "PAYMENT" -> "支付"
+            "LANGUAGE" -> "语言"
+            "CURRENCY" -> "货币"
+            "SAFETY" -> "安全"
+            "PLUG" -> "插座"
+            "TRANSPORT" -> "交通"
+            "VISA" -> "签证"
+            else -> category
+        }
+}
 
 data class RouteDay(
     val day: Int,

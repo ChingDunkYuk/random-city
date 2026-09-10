@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.randomcity.app.util.CityVisuals
+import com.randomcity.app.ui.components.EarthVisual
 
 @Composable
 fun HomeScreen(
@@ -58,18 +58,11 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(48.dp))
 
-        // 本地程序化"地球"视觉:冷色渐变球体 + 轨道环
+        // 手绘地球 + 轨道环
         Box(contentAlignment = Alignment.Center) {
-            val (start, end) = CityVisuals.gradientFor("home-globe")
             Box(
                 modifier = Modifier
-                    .size(220.dp)
-                    .clip(CircleShape)
-                    .background(Brush.linearGradient(listOf(start, end)))
-            )
-            Box(
-                modifier = Modifier
-                    .size(280.dp)
+                    .size(290.dp)
                     .clip(CircleShape)
                     .background(
                         Brush.linearGradient(
@@ -80,6 +73,7 @@ fun HomeScreen(
                         )
                     )
             )
+            EarthVisual(modifier = Modifier.size(220.dp))
         }
 
         // 核心操作区:屏幕中下,单手可达(计划§3.1)
