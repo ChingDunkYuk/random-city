@@ -10,10 +10,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Casino
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -84,15 +88,22 @@ fun HomeScreen(
             enabled = !rolling,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(64.dp),
-            shape = RoundedCornerShape(20.dp),
+                .height(60.dp),
+            shape = RoundedCornerShape(50),
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.primary
-            )
+            ),
+            elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp)
         ) {
+            Icon(
+                imageVector = Icons.Outlined.Casino,
+                contentDescription = null,
+                modifier = Modifier.size(22.dp)
+            )
+            Spacer(modifier = Modifier.width(10.dp))
             Text(
-                text = if (rolling) "🎲 Rolling..." else "🎲 Random",
-                fontSize = 20.sp,
+                text = if (rolling) "Rolling..." else "Random",
+                fontSize = 18.sp,
                 fontWeight = FontWeight.Bold
             )
         }

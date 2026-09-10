@@ -21,7 +21,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
 
         // 大气光晕
         drawCircle(
-            color = Color(0xFF64B5F6).copy(alpha = 0.18f),
+            color = Color(0xFF6B8FE8).copy(alpha = 0.12f),
             radius = radius,
             center = center
         )
@@ -34,7 +34,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
             // 海洋(径向渐变,光源在左上)
             drawCircle(
                 brush = Brush.radialGradient(
-                    colors = listOf(Color(0xFF4FC3F7), Color(0xFF1E88E5), Color(0xFF0D47A1)),
+                    colors = listOf(Color(0xFF8FB4EA), Color(0xFF6B8FD6), Color(0xFF4A67A8)),
                     center = Offset(size.width * 0.38f, size.height * 0.34f),
                     radius = radius * 1.6f
                 ),
@@ -42,8 +42,8 @@ fun EarthVisual(modifier: Modifier = Modifier) {
                 center = center
             )
 
-            val land = Color(0xFF81C784)
-            val landDark = Color(0xFF388E3C)
+            val land = Color(0xFF8FC7AE)
+            val landDark = Color(0xFF6FAE94)
 
             // 抽象大陆块
             drawOval(
@@ -76,7 +76,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
 
             // 云带
             drawArc(
-                color = Color.White.copy(alpha = 0.35f),
+                color = Color.White.copy(alpha = 0.25f),
                 startAngle = 200f,
                 sweepAngle = 140f,
                 useCenter = false,
@@ -85,7 +85,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
                 style = Stroke(width = size.width * 0.030f)
             )
             drawArc(
-                color = Color.White.copy(alpha = 0.25f),
+                color = Color.White.copy(alpha = 0.18f),
                 startAngle = 20f,
                 sweepAngle = 120f,
                 useCenter = false,
@@ -98,7 +98,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
         // 向阳面高光
         drawCircle(
             brush = Brush.radialGradient(
-                colors = listOf(Color.White.copy(alpha = 0.25f), Color.Transparent),
+                colors = listOf(Color.White.copy(alpha = 0.10f), Color.Transparent),
                 center = Offset(size.width * 0.35f, size.height * 0.30f),
                 radius = radius * 0.9f
             ),
@@ -108,7 +108,7 @@ fun EarthVisual(modifier: Modifier = Modifier) {
 
         // 球体描边
         drawCircle(
-            color = Color(0xFF90CAF9).copy(alpha = 0.6f),
+            color = Color(0xFFAEC4F2).copy(alpha = 0.5f),
             radius = radius * 0.9f,
             center = center,
             style = Stroke(width = size.width * 0.008f)

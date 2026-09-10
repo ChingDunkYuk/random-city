@@ -2,14 +2,18 @@ package com.randomcity.app.ui.main
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.outlined.Explore
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.outlined.Place
+import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -38,17 +42,38 @@ fun MainScreen(
 
     Scaffold(
         bottomBar = {
-            NavigationBar {
+            NavigationBar(
+                containerColor = MaterialTheme.colorScheme.surface,
+                tonalElevation = 3.dp
+            ) {
                 NavigationBarItem(
                     selected = selectedTab == TAB_DISCOVER,
                     onClick = { selectedTab = TAB_DISCOVER },
-                    icon = { Icon(Icons.Outlined.Place, contentDescription = "Discover") },
+                    icon = {
+                        Icon(
+                            if (selectedTab == TAB_DISCOVER) {
+                                Icons.Filled.Explore
+                            } else {
+                                Icons.Outlined.Explore
+                            },
+                            contentDescription = "Discover"
+                        )
+                    },
                     label = { Text("Discover") }
                 )
                 NavigationBarItem(
                     selected = selectedTab == TAB_SAVED,
                     onClick = { selectedTab = TAB_SAVED },
-                    icon = { Icon(Icons.Filled.Favorite, contentDescription = "Saved") },
+                    icon = {
+                        Icon(
+                            if (selectedTab == TAB_SAVED) {
+                                Icons.Filled.Favorite
+                            } else {
+                                Icons.Outlined.FavoriteBorder
+                            },
+                            contentDescription = "Saved"
+                        )
+                    },
                     label = { Text("Saved") }
                 )
             }
