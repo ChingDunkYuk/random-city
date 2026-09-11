@@ -28,6 +28,12 @@ val SpaceGroteskFamily = FontFamily(
 
 private val defaultTypography = Typography()
 
+/** Cinzel 碑刻大写体(打包进 APK 的可变字体,不依赖 GMS,必生效)。 */
+val CinzelFamily = FontFamily(
+    androidx.compose.ui.text.font.Font(resId = R.font.cinzel, weight = FontWeight.Normal),
+    androidx.compose.ui.text.font.Font(resId = R.font.cinzel, weight = FontWeight.Bold)
+)
+
 /** 展示/标题/标签系列使用 Space Grotesk,正文保持系统字体(中文混排自然)。 */
 val AppTypography = Typography(
     displayLarge = defaultTypography.displayLarge.copy(
@@ -81,6 +87,11 @@ val AppTypography = Typography(
     )
 )
 
-/** 城市名展示样式:Space Grotesk Bold 40sp。 */
+/** 城市名展示样式:Cinzel Bold 40sp(碑刻大写,艺术感;全大写城市名专用)。 */
 val CityDisplayStyle: TextStyle
-    get() = AppTypography.displayLarge.copy(fontSize = 40.sp)
+    get() = AppTypography.displayLarge.copy(
+        fontFamily = CinzelFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 40.sp,
+        letterSpacing = 2.sp
+    )
