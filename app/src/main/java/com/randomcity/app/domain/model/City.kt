@@ -1,24 +1,26 @@
 package com.randomcity.app.domain.model
 
-enum class Continent(val label: String) {
-    ASIA("亚洲"),
-    EUROPE("欧洲"),
-    AFRICA("非洲"),
-    NORTH_AMERICA("北美洲"),
-    SOUTH_AMERICA("南美洲"),
-    OCEANIA("大洋洲")
+/** 大洲(展示文案在 ui/Labels.kt,经 stringResource 按 locale 取)。 */
+enum class Continent {
+    ASIA,
+    EUROPE,
+    AFRICA,
+    NORTH_AMERICA,
+    SOUTH_AMERICA,
+    OCEANIA
 }
 
-enum class TravelTag(val label: String, val emoji: String) {
-    FOOD("美食", "🍜"),
-    HISTORY("历史", "🏛"),
-    NATURE("自然", "🌲"),
-    BEACH("海岛", "🏖"),
-    CITY("都市", "🌆"),
-    NIGHTLIFE("夜生活", "🌃"),
-    PHOTOGRAPHY("摄影", "📷"),
-    ADVENTURE("探险", "🧗"),
-    BUDGET("穷游", "🎒")
+/** 旅行风格标签;emoji 为图形符号随枚举走,中文文案在 ui/Labels.kt。 */
+enum class TravelTag(val emoji: String) {
+    FOOD("🍜"),
+    HISTORY("🏛"),
+    NATURE("🌲"),
+    BEACH("🏖"),
+    CITY("🌆"),
+    NIGHTLIFE("🌃"),
+    PHOTOGRAPHY("📷"),
+    ADVENTURE("🧗"),
+    BUDGET("🎒")
 }
 
 data class StayArea(
@@ -29,19 +31,7 @@ data class StayArea(
 data class TravelTip(
     val category: String,
     val text: String
-) {
-    val categoryLabel: String
-        get() = when (category.uppercase()) {
-            "PAYMENT" -> "支付"
-            "LANGUAGE" -> "语言"
-            "CURRENCY" -> "货币"
-            "SAFETY" -> "安全"
-            "PLUG" -> "插座"
-            "TRANSPORT" -> "交通"
-            "VISA" -> "签证"
-            else -> category
-        }
-}
+)
 
 data class RouteDay(
     val day: Int,
@@ -77,54 +67,10 @@ data class City(
 ) {
     val displayName: String get() = "$localName $name"
 
-    val bestMonthsLabel: String
-        get() {
-            if (bestMonths.isEmpty()) return "全年"
-            val sorted = bestMonths.sorted()
-            val ranges = mutableListOf<String>()
-            var start = sorted.first()
-            var prev = start
-            for (m in sorted.drop(1)) {
-                if (m == prev + 1) {
-                    prev = m
-                } else {
-                    ranges += if (start == prev) "${start}月" else "${start}–${prev}月"
-                    start = m
-                    prev = m
-                }
-            }
-            ranges += if (start == prev) "${start}月" else "${start}–${prev}月"
-            return ranges.joinToString(" · ")
-        }
-
-    /** 每日预算区间(v0.9.1):比 $ 图标更直观。 */
-    val budgetLabel: String
-        get() = when (budgetLevel.coerceIn(1, 4)) {
-            1 -> "¥300–600/天"
-            2 -> "¥600–1200/天"
-            3 -> "¥1200–2500/天"
-            else -> "¥2500+/天"
-        }
-
     /** 有效推荐天数(v0.9.1):5+ 景点的城市 2–3 天太赶,上调下限。 */
     val effectiveDaysMin: Int
         get() = if (attractions.size >= 5) maxOf(recommendedDaysMin, 3) else recommendedDaysMin
 
     val effectiveDaysMax: Int
         get() = if (attractions.size >= 5) maxOf(recommendedDaysMax, 4) else recommendedDaysMax
-
-    val recommendedDaysLabel: String
-        get() = if (effectiveDaysMin == effectiveDaysMax) {
-            "$effectiveDaysMin 天"
-        } else {
-            "$effectiveDaysMin–$effectiveDaysMax 天"
-        }
-}
-
-/** 预算档位的金额区间(筛选面板用,不带"/天"后缀)。 */
-fun budgetRangeLabel(level: Int): String = when (level.coerceIn(1, 4)) {
-    1 -> "¥300–600"
-    2 -> "¥600–1200"
-    3 -> "¥1200–2500"
-    else -> "¥2500+"
 }

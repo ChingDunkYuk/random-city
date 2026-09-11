@@ -1,0 +1,2958 @@
+{
+  "schemaVersion": 2,
+  "cities": [
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "continent": "ASIA",
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 4,
+      "recommendedDaysMax": 6,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "tokyo",
+        "shibuya"
+      ]
+    },
+    {
+      "id": "osaka",
+      "name": "Osaka",
+      "country": "Japan",
+      "countryCode": "JP",
+      "continent": "ASIA",
+      "latitude": 34.6937,
+      "longitude": 135.5023,
+      "tags": [
+        "FOOD",
+        "CITY",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "osaka",
+        "dotonbori"
+      ]
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto",
+      "country": "Japan",
+      "countryCode": "JP",
+      "continent": "ASIA",
+      "latitude": 35.0116,
+      "longitude": 135.7681,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "kyoto",
+        "torii"
+      ]
+    },
+    {
+      "id": "sapporo",
+      "name": "Sapporo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "continent": "ASIA",
+      "latitude": 43.0618,
+      "longitude": 141.3545,
+      "tags": [
+        "FOOD",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        2,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "sapporo",
+        "snow"
+      ]
+    },
+    {
+      "id": "fukuoka",
+      "name": "Fukuoka",
+      "country": "Japan",
+      "countryCode": "JP",
+      "continent": "ASIA",
+      "latitude": 33.5902,
+      "longitude": 130.4017,
+      "tags": [
+        "FOOD",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "fukuoka",
+        "yatai"
+      ]
+    },
+    {
+      "id": "seoul",
+      "name": "Seoul",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "continent": "ASIA",
+      "latitude": 37.5665,
+      "longitude": 126.978,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "seoul",
+        "palace"
+      ]
+    },
+    {
+      "id": "busan",
+      "name": "Busan",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "continent": "ASIA",
+      "latitude": 35.1796,
+      "longitude": 129.0756,
+      "tags": [
+        "BEACH",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "busan",
+        "haeundae"
+      ]
+    },
+    {
+      "id": "jeju",
+      "name": "Jeju",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "continent": "ASIA",
+      "latitude": 33.4996,
+      "longitude": 126.5312,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "jeju",
+        "volcano"
+      ]
+    },
+    {
+      "id": "taipei",
+      "name": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "continent": "ASIA",
+      "latitude": 25.033,
+      "longitude": 121.5654,
+      "tags": [
+        "FOOD",
+        "CITY",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "taipei",
+        "101"
+      ]
+    },
+    {
+      "id": "kaohsiung",
+      "name": "Kaohsiung",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "continent": "ASIA",
+      "latitude": 22.6273,
+      "longitude": 120.3014,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "kaohsiung",
+        "harbor"
+      ]
+    },
+    {
+      "id": "hong_kong",
+      "name": "Hong Kong",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "continent": "ASIA",
+      "latitude": 22.3193,
+      "longitude": 114.1694,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NIGHTLIFE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "hongkong",
+        "skyline"
+      ]
+    },
+    {
+      "id": "macau",
+      "name": "Macau",
+      "country": "Macau",
+      "countryCode": "MO",
+      "continent": "ASIA",
+      "latitude": 22.1987,
+      "longitude": 113.5439,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "macau",
+        "ruins"
+      ]
+    },
+    {
+      "id": "bangkok",
+      "name": "Bangkok",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "continent": "ASIA",
+      "latitude": 13.7563,
+      "longitude": 100.5018,
+      "tags": [
+        "FOOD",
+        "NIGHTLIFE",
+        "BUDGET",
+        "CITY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "bangkok",
+        "temple"
+      ]
+    },
+    {
+      "id": "chiang_mai",
+      "name": "Chiang Mai",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "continent": "ASIA",
+      "latitude": 18.7883,
+      "longitude": 98.9853,
+      "tags": [
+        "NATURE",
+        "HISTORY",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "chiangmai",
+        "temple"
+      ]
+    },
+    {
+      "id": "phuket",
+      "name": "Phuket",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "continent": "ASIA",
+      "latitude": 7.8804,
+      "longitude": 98.3923,
+      "tags": [
+        "BEACH",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "phuket",
+        "beach"
+      ]
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "continent": "ASIA",
+      "latitude": 1.3521,
+      "longitude": 103.8198,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "singapore",
+        "marinabay"
+      ]
+    },
+    {
+      "id": "kuala_lumpur",
+      "name": "Kuala Lumpur",
+      "country": "Malaysia",
+      "countryCode": "MY",
+      "continent": "ASIA",
+      "latitude": 3.139,
+      "longitude": 101.6869,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "kualalumpur",
+        "petronas"
+      ]
+    },
+    {
+      "id": "penang",
+      "name": "Penang",
+      "country": "Malaysia",
+      "countryCode": "MY",
+      "continent": "ASIA",
+      "latitude": 5.4164,
+      "longitude": 100.3327,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "penang",
+        "streetart"
+      ]
+    },
+    {
+      "id": "hanoi",
+      "name": "Hanoi",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "continent": "ASIA",
+      "latitude": 21.0285,
+      "longitude": 105.8542,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        3,
+        4
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "hanoi",
+        "oldquarter"
+      ]
+    },
+    {
+      "id": "ho_chi_minh",
+      "name": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "continent": "ASIA",
+      "latitude": 10.8231,
+      "longitude": 106.6297,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NIGHTLIFE",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "saigon",
+        "motorbike"
+      ]
+    },
+    {
+      "id": "da_nang",
+      "name": "Da Nang",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "continent": "ASIA",
+      "latitude": 16.0544,
+      "longitude": 108.2022,
+      "tags": [
+        "BEACH",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "danang",
+        "goldenbridge"
+      ]
+    },
+    {
+      "id": "hoi_an",
+      "name": "Hoi An",
+      "country": "Vietnam",
+      "countryCode": "VN",
+      "continent": "ASIA",
+      "latitude": 15.8801,
+      "longitude": 108.338,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "hoian",
+        "lanterns"
+      ]
+    },
+    {
+      "id": "bali",
+      "name": "Bali",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "continent": "ASIA",
+      "latitude": -8.3405,
+      "longitude": 115.092,
+      "tags": [
+        "BEACH",
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 4,
+      "recommendedDaysMax": 7,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "bali",
+        "ubud"
+      ]
+    },
+    {
+      "id": "siem_reap",
+      "name": "Siem Reap",
+      "country": "Cambodia",
+      "countryCode": "KH",
+      "continent": "ASIA",
+      "latitude": 13.3633,
+      "longitude": 103.8564,
+      "tags": [
+        "HISTORY",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "angkor",
+        "sunrise"
+      ]
+    },
+    {
+      "id": "luang_prabang",
+      "name": "Luang Prabang",
+      "country": "Laos",
+      "countryCode": "LA",
+      "continent": "ASIA",
+      "latitude": 19.8849,
+      "longitude": 102.1354,
+      "tags": [
+        "HISTORY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "luangprabang",
+        "monks"
+      ]
+    },
+    {
+      "id": "kathmandu",
+      "name": "Kathmandu",
+      "country": "Nepal",
+      "countryCode": "NP",
+      "continent": "ASIA",
+      "latitude": 27.7172,
+      "longitude": 85.324,
+      "tags": [
+        "HISTORY",
+        "ADVENTURE",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        3,
+        4
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "kathmandu",
+        "stupa"
+      ]
+    },
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "country": "India",
+      "countryCode": "IN",
+      "continent": "ASIA",
+      "latitude": 28.7041,
+      "longitude": 77.1025,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "delhi",
+        "redfort"
+      ]
+    },
+    {
+      "id": "jaipur",
+      "name": "Jaipur",
+      "country": "India",
+      "countryCode": "IN",
+      "continent": "ASIA",
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "jaipur",
+        "pinkcity"
+      ]
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "country": "India",
+      "countryCode": "IN",
+      "continent": "ASIA",
+      "latitude": 19.076,
+      "longitude": 72.8777,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "mumbai",
+        "gateway"
+      ]
+    },
+    {
+      "id": "udaipur",
+      "name": "Udaipur",
+      "country": "India",
+      "countryCode": "IN",
+      "continent": "ASIA",
+      "latitude": 24.5854,
+      "longitude": 73.7125,
+      "tags": [
+        "PHOTOGRAPHY",
+        "HISTORY",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "udaipur",
+        "lakepalace"
+      ]
+    },
+    {
+      "id": "colombo",
+      "name": "Colombo",
+      "country": "Sri Lanka",
+      "countryCode": "LK",
+      "continent": "ASIA",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "colombo",
+        "seafront"
+      ]
+    },
+    {
+      "id": "male",
+      "name": "Male",
+      "country": "Maldives",
+      "countryCode": "MV",
+      "continent": "ASIA",
+      "latitude": 4.1755,
+      "longitude": 73.5093,
+      "tags": [
+        "BEACH",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "male",
+        "maldives"
+      ]
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "country": "United Arab Emirates",
+      "countryCode": "AE",
+      "continent": "ASIA",
+      "latitude": 25.2048,
+      "longitude": 55.2708,
+      "tags": [
+        "CITY",
+        "NIGHTLIFE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 4,
+      "transportScore": 4,
+      "imageKeywords": [
+        "dubai",
+        "burjkhalifa"
+      ]
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "country": "China",
+      "countryCode": "CN",
+      "continent": "ASIA",
+      "latitude": 39.9042,
+      "longitude": 116.4074,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "CITY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "beijing",
+        "forbiddencity"
+      ]
+    },
+    {
+      "id": "shanghai",
+      "name": "Shanghai",
+      "country": "China",
+      "countryCode": "CN",
+      "continent": "ASIA",
+      "latitude": 31.2304,
+      "longitude": 121.4737,
+      "tags": [
+        "CITY",
+        "NIGHTLIFE",
+        "PHOTOGRAPHY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "shanghai",
+        "bund"
+      ]
+    },
+    {
+      "id": "chengdu",
+      "name": "Chengdu",
+      "country": "China",
+      "countryCode": "CN",
+      "continent": "ASIA",
+      "latitude": 30.5728,
+      "longitude": 104.0668,
+      "tags": [
+        "FOOD",
+        "NATURE",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "chengdu",
+        "panda"
+      ]
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "continent": "EUROPE",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "paris",
+        "eiffel"
+      ]
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "continent": "EUROPE",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 5,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "london",
+        "towerbridge"
+      ]
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "country": "Italy",
+      "countryCode": "IT",
+      "continent": "EUROPE",
+      "latitude": 41.9028,
+      "longitude": 12.4964,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "rome",
+        "colosseum"
+      ]
+    },
+    {
+      "id": "milan",
+      "name": "Milan",
+      "country": "Italy",
+      "countryCode": "IT",
+      "continent": "EUROPE",
+      "latitude": 45.4642,
+      "longitude": 9.19,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "milan",
+        "duomo"
+      ]
+    },
+    {
+      "id": "florence",
+      "name": "Florence",
+      "country": "Italy",
+      "countryCode": "IT",
+      "continent": "EUROPE",
+      "latitude": 43.7696,
+      "longitude": 11.2558,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "florence",
+        "duomo"
+      ]
+    },
+    {
+      "id": "venice",
+      "name": "Venice",
+      "country": "Italy",
+      "countryCode": "IT",
+      "continent": "EUROPE",
+      "latitude": 45.4408,
+      "longitude": 12.3155,
+      "tags": [
+        "PHOTOGRAPHY",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 4,
+      "transportScore": 3,
+      "imageKeywords": [
+        "venice",
+        "canal"
+      ]
+    },
+    {
+      "id": "naples",
+      "name": "Naples",
+      "country": "Italy",
+      "countryCode": "IT",
+      "continent": "EUROPE",
+      "latitude": 40.8518,
+      "longitude": 14.2681,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "naples",
+        "pompeii"
+      ]
+    },
+    {
+      "id": "prague",
+      "name": "Prague",
+      "country": "Czech Republic",
+      "countryCode": "CZ",
+      "continent": "EUROPE",
+      "latitude": 50.0755,
+      "longitude": 14.4378,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "prague",
+        "charlesbridge"
+      ]
+    },
+    {
+      "id": "vienna",
+      "name": "Vienna",
+      "country": "Austria",
+      "countryCode": "AT",
+      "continent": "EUROPE",
+      "latitude": 48.2082,
+      "longitude": 16.3738,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        12
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "vienna",
+        "schonbrunn"
+      ]
+    },
+    {
+      "id": "budapest",
+      "name": "Budapest",
+      "country": "Hungary",
+      "countryCode": "HU",
+      "continent": "EUROPE",
+      "latitude": 47.4979,
+      "longitude": 19.0402,
+      "tags": [
+        "HISTORY",
+        "NIGHTLIFE",
+        "BUDGET",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "budapest",
+        "parliament"
+      ]
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "continent": "EUROPE",
+      "latitude": 52.3676,
+      "longitude": 4.9041,
+      "tags": [
+        "PHOTOGRAPHY",
+        "HISTORY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "amsterdam",
+        "canal"
+      ]
+    },
+    {
+      "id": "berlin",
+      "name": "Berlin",
+      "country": "Germany",
+      "countryCode": "DE",
+      "continent": "EUROPE",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "tags": [
+        "HISTORY",
+        "NIGHTLIFE",
+        "CITY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "berlin",
+        "brandenburg"
+      ]
+    },
+    {
+      "id": "munich",
+      "name": "Munich",
+      "country": "Germany",
+      "countryCode": "DE",
+      "continent": "EUROPE",
+      "latitude": 48.1351,
+      "longitude": 11.582,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "munich",
+        "oktoberfest"
+      ]
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "country": "Spain",
+      "countryCode": "ES",
+      "continent": "EUROPE",
+      "latitude": 41.3874,
+      "longitude": 2.1686,
+      "tags": [
+        "PHOTOGRAPHY",
+        "BEACH",
+        "CITY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "barcelona",
+        "sagradafamilia"
+      ]
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "continent": "EUROPE",
+      "latitude": 40.4168,
+      "longitude": -3.7038,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 5,
+      "imageKeywords": [
+        "madrid",
+        "prado"
+      ]
+    },
+    {
+      "id": "seville",
+      "name": "Seville",
+      "country": "Spain",
+      "countryCode": "ES",
+      "continent": "EUROPE",
+      "latitude": 37.3891,
+      "longitude": -5.9845,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "seville",
+        "plazaespana"
+      ]
+    },
+    {
+      "id": "lisbon",
+      "name": "Lisbon",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "continent": "EUROPE",
+      "latitude": 38.7223,
+      "longitude": -9.1393,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "lisbon",
+        "tram28"
+      ]
+    },
+    {
+      "id": "porto",
+      "name": "Porto",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "continent": "EUROPE",
+      "latitude": 41.1579,
+      "longitude": -8.6291,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "porto",
+        "douro"
+      ]
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanbul",
+      "country": "Turkey",
+      "countryCode": "TR",
+      "continent": "EUROPE",
+      "latitude": 41.0082,
+      "longitude": 28.9784,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "istanbul",
+        "hagiasophia"
+      ]
+    },
+    {
+      "id": "tbilisi",
+      "name": "Tbilisi",
+      "country": "Georgia",
+      "countryCode": "GE",
+      "continent": "EUROPE",
+      "latitude": 41.7151,
+      "longitude": 44.8271,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "BUDGET",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "tbilisi",
+        "oldtown"
+      ]
+    },
+    {
+      "id": "athens",
+      "name": "Athens",
+      "country": "Greece",
+      "countryCode": "GR",
+      "continent": "EUROPE",
+      "latitude": 37.9838,
+      "longitude": 23.7275,
+      "tags": [
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "athens",
+        "acropolis"
+      ]
+    },
+    {
+      "id": "santorini",
+      "name": "Santorini",
+      "country": "Greece",
+      "countryCode": "GR",
+      "continent": "EUROPE",
+      "latitude": 36.461,
+      "longitude": 25.376,
+      "tags": [
+        "PHOTOGRAPHY",
+        "BEACH",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 4,
+      "transportScore": 2,
+      "imageKeywords": [
+        "santorini",
+        "oia"
+      ]
+    },
+    {
+      "id": "dubrovnik",
+      "name": "Dubrovnik",
+      "country": "Croatia",
+      "countryCode": "HR",
+      "continent": "EUROPE",
+      "latitude": 42.6507,
+      "longitude": 18.0944,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "BEACH"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "dubrovnik",
+        "citywalls"
+      ]
+    },
+    {
+      "id": "split",
+      "name": "Split",
+      "country": "Croatia",
+      "countryCode": "HR",
+      "continent": "EUROPE",
+      "latitude": 43.5081,
+      "longitude": 16.4402,
+      "tags": [
+        "HISTORY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "split",
+        "palace"
+      ]
+    },
+    {
+      "id": "krakow",
+      "name": "Krakow",
+      "country": "Poland",
+      "countryCode": "PL",
+      "continent": "EUROPE",
+      "latitude": 50.0647,
+      "longitude": 19.945,
+      "tags": [
+        "HISTORY",
+        "BUDGET",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        12
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "krakow",
+        "square"
+      ]
+    },
+    {
+      "id": "warsaw",
+      "name": "Warsaw",
+      "country": "Poland",
+      "countryCode": "PL",
+      "continent": "EUROPE",
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "tags": [
+        "HISTORY",
+        "BUDGET",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "warsaw",
+        "oldtown"
+      ]
+    },
+    {
+      "id": "copenhagen",
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "continent": "EUROPE",
+      "latitude": 55.6761,
+      "longitude": 12.5683,
+      "tags": [
+        "PHOTOGRAPHY",
+        "CITY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "copenhagen",
+        "nyhavn"
+      ]
+    },
+    {
+      "id": "stockholm",
+      "name": "Stockholm",
+      "country": "Sweden",
+      "countryCode": "SE",
+      "continent": "EUROPE",
+      "latitude": 59.3293,
+      "longitude": 18.0686,
+      "tags": [
+        "CITY",
+        "PHOTOGRAPHY",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "stockholm",
+        "gamlastan"
+      ]
+    },
+    {
+      "id": "oslo",
+      "name": "Oslo",
+      "country": "Norway",
+      "countryCode": "NO",
+      "continent": "EUROPE",
+      "latitude": 59.9139,
+      "longitude": 10.7522,
+      "tags": [
+        "NATURE",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "oslo",
+        "operahouse"
+      ]
+    },
+    {
+      "id": "helsinki",
+      "name": "Helsinki",
+      "country": "Finland",
+      "countryCode": "FI",
+      "continent": "EUROPE",
+      "latitude": 60.1699,
+      "longitude": 24.9384,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 4,
+      "transportScore": 4,
+      "imageKeywords": [
+        "helsinki",
+        "cathedral"
+      ]
+    },
+    {
+      "id": "reykjavik",
+      "name": "Reykjavik",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "continent": "EUROPE",
+      "latitude": 64.1466,
+      "longitude": -21.9426,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        1
+      ],
+      "budgetLevel": 4,
+      "transportScore": 2,
+      "imageKeywords": [
+        "reykjavik",
+        "aurora"
+      ]
+    },
+    {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "continent": "EUROPE",
+      "latitude": 55.9533,
+      "longitude": -3.1883,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "edinburgh",
+        "castle"
+      ]
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "country": "Ireland",
+      "countryCode": "IE",
+      "continent": "EUROPE",
+      "latitude": 53.3498,
+      "longitude": -6.2603,
+      "tags": [
+        "NIGHTLIFE",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "dublin",
+        "templebar"
+      ]
+    },
+    {
+      "id": "bruges",
+      "name": "Bruges",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "continent": "EUROPE",
+      "latitude": 51.2093,
+      "longitude": 3.2247,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "bruges",
+        "canal"
+      ]
+    },
+    {
+      "id": "brussels",
+      "name": "Brussels",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "continent": "EUROPE",
+      "latitude": 50.8503,
+      "longitude": 4.3517,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "brussels",
+        "grandplace"
+      ]
+    },
+    {
+      "id": "new_york",
+      "name": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "tags": [
+        "CITY",
+        "NIGHTLIFE",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 4,
+      "recommendedDaysMax": 6,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 4,
+      "transportScore": 5,
+      "imageKeywords": [
+        "newyork",
+        "manhattan"
+      ]
+    },
+    {
+      "id": "san_francisco",
+      "name": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "tags": [
+        "CITY",
+        "PHOTOGRAPHY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 4,
+      "transportScore": 4,
+      "imageKeywords": [
+        "sanfrancisco",
+        "goldengate"
+      ]
+    },
+    {
+      "id": "los_angeles",
+      "name": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "losangeles",
+        "hollywood"
+      ]
+    },
+    {
+      "id": "las_vegas",
+      "name": "Las Vegas",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 36.1699,
+      "longitude": -115.1398,
+      "tags": [
+        "NIGHTLIFE",
+        "CITY",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "lasvegas",
+        "strip"
+      ]
+    },
+    {
+      "id": "new_orleans",
+      "name": "New Orleans",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 29.9511,
+      "longitude": -90.0715,
+      "tags": [
+        "FOOD",
+        "NIGHTLIFE",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "neworleans",
+        "frenchquarter"
+      ]
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "chicago",
+        "skyline"
+      ]
+    },
+    {
+      "id": "seattle",
+      "name": "Seattle",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "seattle",
+        "spaceneedle"
+      ]
+    },
+    {
+      "id": "vancouver",
+      "name": "Vancouver",
+      "country": "Canada",
+      "countryCode": "CA",
+      "continent": "NORTH_AMERICA",
+      "latitude": 49.2827,
+      "longitude": -123.1207,
+      "tags": [
+        "NATURE",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "vancouver",
+        "stanleypark"
+      ]
+    },
+    {
+      "id": "toronto",
+      "name": "Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "continent": "NORTH_AMERICA",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "toronto",
+        "cntower"
+      ]
+    },
+    {
+      "id": "montreal",
+      "name": "Montreal",
+      "country": "Canada",
+      "countryCode": "CA",
+      "continent": "NORTH_AMERICA",
+      "latitude": 45.5017,
+      "longitude": -73.5673,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "montreal",
+        "oldport"
+      ]
+    },
+    {
+      "id": "mexico_city",
+      "name": "Mexico City",
+      "country": "Mexico",
+      "countryCode": "MX",
+      "continent": "NORTH_AMERICA",
+      "latitude": 19.4326,
+      "longitude": -99.1332,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "BUDGET"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "mexicocity",
+        "zocalo"
+      ]
+    },
+    {
+      "id": "oaxaca",
+      "name": "Oaxaca",
+      "country": "Mexico",
+      "countryCode": "MX",
+      "continent": "NORTH_AMERICA",
+      "latitude": 17.0732,
+      "longitude": -96.7266,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "BUDGET",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        3,
+        4
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "oaxaca",
+        "mexico"
+      ]
+    },
+    {
+      "id": "rio_de_janeiro",
+      "name": "Rio de Janeiro",
+      "country": "Brazil",
+      "countryCode": "BR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -22.9068,
+      "longitude": -43.1729,
+      "tags": [
+        "BEACH",
+        "NATURE",
+        "NIGHTLIFE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "rio",
+        "christredeemer"
+      ]
+    },
+    {
+      "id": "buenos_aires",
+      "name": "Buenos Aires",
+      "country": "Argentina",
+      "countryCode": "AR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -34.6037,
+      "longitude": -58.3816,
+      "tags": [
+        "FOOD",
+        "HISTORY",
+        "NIGHTLIFE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "buenosaires",
+        "laboca"
+      ]
+    },
+    {
+      "id": "lima",
+      "name": "Lima",
+      "country": "Peru",
+      "countryCode": "PE",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -12.0464,
+      "longitude": -77.0428,
+      "tags": [
+        "FOOD",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "lima",
+        "miraflores"
+      ]
+    },
+    {
+      "id": "cusco",
+      "name": "Cusco",
+      "country": "Peru",
+      "countryCode": "PE",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -13.532,
+      "longitude": -71.9675,
+      "tags": [
+        "HISTORY",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "cusco",
+        "machupicchu"
+      ]
+    },
+    {
+      "id": "cartagena",
+      "name": "Cartagena",
+      "country": "Colombia",
+      "countryCode": "CO",
+      "continent": "SOUTH_AMERICA",
+      "latitude": 10.391,
+      "longitude": -75.4794,
+      "tags": [
+        "HISTORY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "cartagena",
+        "colombia"
+      ]
+    },
+    {
+      "id": "santiago",
+      "name": "Santiago",
+      "country": "Chile",
+      "countryCode": "CL",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -33.4489,
+      "longitude": -70.6693,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        9,
+        10,
+        11,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "santiago",
+        "andes"
+      ]
+    },
+    {
+      "id": "medellin",
+      "name": "Medellin",
+      "country": "Colombia",
+      "countryCode": "CO",
+      "continent": "SOUTH_AMERICA",
+      "latitude": 6.2442,
+      "longitude": -75.5812,
+      "tags": [
+        "CITY",
+        "NIGHTLIFE",
+        "BUDGET",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        1,
+        2,
+        7,
+        8,
+        12
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "medellin",
+        "comuna13"
+      ]
+    },
+    {
+      "id": "salvador",
+      "name": "Salvador",
+      "country": "Brazil",
+      "countryCode": "BR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -12.9777,
+      "longitude": -38.5016,
+      "tags": [
+        "HISTORY",
+        "BEACH",
+        "FOOD",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "salvador",
+        "pelourinho"
+      ]
+    },
+    {
+      "id": "marrakech",
+      "name": "Marrakech",
+      "country": "Morocco",
+      "countryCode": "MA",
+      "continent": "AFRICA",
+      "latitude": 31.6295,
+      "longitude": -7.9811,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "marrakech",
+        "medina"
+      ]
+    },
+    {
+      "id": "fes",
+      "name": "Fes",
+      "country": "Morocco",
+      "countryCode": "MA",
+      "continent": "AFRICA",
+      "latitude": 34.0181,
+      "longitude": -5.0078,
+      "tags": [
+        "HISTORY",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "fes",
+        "tannery"
+      ]
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo",
+      "country": "Egypt",
+      "countryCode": "EG",
+      "continent": "AFRICA",
+      "latitude": 30.0444,
+      "longitude": 31.2357,
+      "tags": [
+        "HISTORY",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "cairo",
+        "pyramids"
+      ]
+    },
+    {
+      "id": "luxor",
+      "name": "Luxor",
+      "country": "Egypt",
+      "countryCode": "EG",
+      "continent": "AFRICA",
+      "latitude": 25.6872,
+      "longitude": 32.6396,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "luxor",
+        "karnak"
+      ]
+    },
+    {
+      "id": "cape_town",
+      "name": "Cape Town",
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "continent": "AFRICA",
+      "latitude": -33.9249,
+      "longitude": 18.4241,
+      "tags": [
+        "NATURE",
+        "PHOTOGRAPHY",
+        "ADVENTURE",
+        "BEACH"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "capetown",
+        "tablemountain"
+      ]
+    },
+    {
+      "id": "zanzibar",
+      "name": "Zanzibar",
+      "country": "Tanzania",
+      "countryCode": "TZ",
+      "continent": "AFRICA",
+      "latitude": -6.1659,
+      "longitude": 39.1989,
+      "tags": [
+        "BEACH",
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        1
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "zanzibar",
+        "stonetown"
+      ]
+    },
+    {
+      "id": "nairobi",
+      "name": "Nairobi",
+      "country": "Kenya",
+      "countryCode": "KE",
+      "continent": "AFRICA",
+      "latitude": -1.2921,
+      "longitude": 36.8219,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        1,
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "nairobi",
+        "safari"
+      ]
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "tags": [
+        "BEACH",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 4,
+      "transportScore": 4,
+      "imageKeywords": [
+        "sydney",
+        "operahouse"
+      ]
+    },
+    {
+      "id": "melbourne",
+      "name": "Melbourne",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -37.8136,
+      "longitude": 144.9631,
+      "tags": [
+        "FOOD",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        10,
+        11,
+        3,
+        4
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "melbourne",
+        "laneways"
+      ]
+    },
+    {
+      "id": "auckland",
+      "name": "Auckland",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "continent": "OCEANIA",
+      "latitude": -36.8485,
+      "longitude": 174.7633,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "auckland",
+        "skytower"
+      ]
+    },
+    {
+      "id": "queenstown",
+      "name": "Queenstown",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "continent": "OCEANIA",
+      "latitude": -45.0312,
+      "longitude": 168.6626,
+      "tags": [
+        "ADVENTURE",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "queenstown",
+        "lake"
+      ]
+    },
+    {
+      "id": "nadi",
+      "name": "Nadi",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "continent": "OCEANIA",
+      "latitude": -17.7765,
+      "longitude": 177.4356,
+      "tags": [
+        "BEACH",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 2,
+      "imageKeywords": [
+        "fiji",
+        "beach"
+      ]
+    }
+  ]
+}

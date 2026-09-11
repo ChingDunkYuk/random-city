@@ -1,6 +1,9 @@
 package com.randomcity.app
 
 import com.randomcity.app.data.model.CityDataSet
+import com.randomcity.app.data.model.CityStructureDataSet
+import com.randomcity.app.data.model.CityTextDataSet
+import com.randomcity.app.data.model.mergeCities
 import com.randomcity.app.domain.model.Continent
 import com.randomcity.app.domain.model.TravelTag
 import kotlinx.serialization.json.Json
@@ -11,17 +14,50 @@ import org.junit.Test
 import java.io.File
 
 /**
- * cities.json 数据完整性校验(计划书§53):
- * 必填字段缺失或 id 重复的城市不允许进入正式城市池。
+ * 城市数据完整性校验(v1.1,结构/文案双文件):
+ * 结构层(data/cities.json)与文案层(data/cities_zh.json)id 集合一致,
+ * 合并后必填字段缺失或 id 重复的城市不允许进入正式城市池。
  */
 class CityDataValidationTest {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    private val dataSet: CityDataSet by lazy {
-        val file = File("src/main/assets/cities.json")
-        assertTrue("cities.json 不存在: ${file.absolutePath}", file.exists())
-        json.decodeFromString(CityDataSet.serializer(), file.readText())
+    private val structureSet: CityStructureDataSet by lazy {
+        val file = File("src/main/assets/data/cities.json")
+        assertTrue("结构层 cities.json 不存在: ${file.absolutePath}", file.exists())
+        json.decodeFromString(CityStructureDataSet.serializer(), file.readText())
+    }
+
+    private val textSet: CityTextDataSet by lazy {
+        val file = File("src/main/assets/data/cities_zh.json")
+        assertTrue("文案层 cities_zh.json 不存在: ${file.absolutePath}", file.exists())
+        json.decodeFromString(CityTextDataSet.serializer(), file.readText())
+    }
+
+    private val dataSet: CityDataSet by lazy { mergeCities(structureSet, textSet) }
+
+    @Test
+    fun `structure and text layers have identical id sets`() {
+        val structureIds = structureSet.cities.map { it.id }.toSet()
+        val textIds = textSet.cities.map { it.id }.toSet()
+        assertEquals(
+            "结构/文案 id 不一致(结构独有: ${structureIds - textIds},文案独有: ${textIds - structureIds})",
+            structureIds,
+            textIds
+        )
+    }
+
+    @Test
+    fun `text layer is complete for every city`() {
+        textSet.cities.forEach { city ->
+            fun check(condition: Boolean, field: String) {
+                if (!condition) fail("城市 ${city.id} 文案层缺少: $field")
+            }
+            check(city.localName.isNotBlank(), "localName")
+            check(city.description.isNotBlank(), "description")
+            check(city.attractions.isNotEmpty(), "attractions")
+            check(city.foods.isNotEmpty(), "foods")
+        }
     }
 
     @Test

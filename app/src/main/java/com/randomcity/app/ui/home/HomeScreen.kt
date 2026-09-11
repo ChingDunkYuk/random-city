@@ -61,31 +61,33 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.randomcity.app.R
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.domain.model.TravelTag
 import com.randomcity.app.ui.components.CityImage
 import com.randomcity.app.ui.components.EarthVisual
 import com.randomcity.app.ui.components.SectionTitle
+import com.randomcity.app.ui.label
 import com.randomcity.app.util.CityVisuals
 import kotlinx.coroutines.delay
 
-/** 心情入口(计划书§34):标签 + 中文名 + 线性图标。 */
+/** 心情入口(计划书§34):标签 + 线性图标;文案经 stringResource。 */
 private data class MoodItem(
     val tag: TravelTag,
-    val label: String,
     val icon: ImageVector
 )
 
 private val MOODS = listOf(
-    MoodItem(TravelTag.FOOD, "美食之旅", Icons.Outlined.Restaurant),
-    MoodItem(TravelTag.BEACH, "海岛", Icons.Outlined.BeachAccess),
-    MoodItem(TravelTag.PHOTOGRAPHY, "摄影", Icons.Outlined.PhotoCamera),
-    MoodItem(TravelTag.HISTORY, "历史", Icons.Outlined.AccountBalance),
-    MoodItem(TravelTag.NATURE, "自然", Icons.Outlined.Park)
+    MoodItem(TravelTag.FOOD, Icons.Outlined.Restaurant),
+    MoodItem(TravelTag.BEACH, Icons.Outlined.BeachAccess),
+    MoodItem(TravelTag.PHOTOGRAPHY, Icons.Outlined.PhotoCamera),
+    MoodItem(TravelTag.HISTORY, Icons.Outlined.AccountBalance),
+    MoodItem(TravelTag.NATURE, Icons.Outlined.Park)
 )
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -124,7 +126,7 @@ fun HomeScreen(
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = "下一站,去哪呢?",
+            text = stringResource(R.string.home_subtitle),
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -164,7 +166,7 @@ fun HomeScreen(
             )
             Spacer(modifier = Modifier.width(10.dp))
             Text(
-                text = if (rolling) "抽取中…" else "随机",
+                text = stringResource(if (rolling) R.string.rolling else R.string.home_random),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -184,7 +186,7 @@ fun HomeScreen(
                     modifier = Modifier.size(18.dp)
                 )
                 Spacer(modifier = Modifier.width(6.dp))
-                Text("筛选")
+                Text(stringResource(R.string.home_filter))
                 if (filter.isActive) {
                     Spacer(modifier = Modifier.width(6.dp))
                     Box(
@@ -209,18 +211,16 @@ fun HomeScreen(
                     modifier = Modifier.size(18.dp)
                 )
                 Spacer(modifier = Modifier.width(6.dp))
-                Text("惊喜一下")
+                Text(stringResource(R.string.home_surprise))
             }
         }
 
         Spacer(modifier = Modifier.height(10.dp))
 
         Text(
-            text = if (emptyResult) {
-                "没有匹配的城市,试试放宽筛选"
-            } else {
-                "探索意想不到的地方"
-            },
+            text = stringResource(
+                if (emptyResult) R.string.home_empty_result else R.string.tagline
+            ),
             style = MaterialTheme.typography.bodyMedium,
             color = if (emptyResult) {
                 MaterialTheme.colorScheme.primary
@@ -234,7 +234,7 @@ fun HomeScreen(
 
         // 按心情探索(v0.7,计划书§34)
         Column(modifier = Modifier.fillMaxWidth()) {
-            SectionTitle("按心情探索")
+            SectionTitle(stringResource(R.string.home_section_mood))
             Spacer(modifier = Modifier.height(12.dp))
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -259,7 +259,7 @@ fun HomeScreen(
         // 精选城市(v0.7,计划书§35)
         if (featured.isNotEmpty()) {
             Column(modifier = Modifier.fillMaxWidth()) {
-                SectionTitle("精选城市")
+                SectionTitle(stringResource(R.string.home_section_featured))
                 Spacer(modifier = Modifier.height(12.dp))
                 LazyRow(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -348,7 +348,11 @@ private fun MoodCard(
             )
             Spacer(modifier = Modifier.width(6.dp))
             Text(
-                text = mood.label,
+                text = if (mood.tag == TravelTag.FOOD) {
+                    stringResource(R.string.mood_food)
+                } else {
+                    mood.tag.label()
+                },
                 style = MaterialTheme.typography.labelLarge
             )
         }

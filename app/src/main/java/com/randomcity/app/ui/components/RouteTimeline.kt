@@ -15,8 +15,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.randomcity.app.R
 import com.randomcity.app.domain.model.RouteDay
 
 /**
@@ -28,7 +30,7 @@ fun RouteTimeline(route: List<RouteDay>, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         route.forEachIndexed { dayIndex, day ->
             Text(
-                text = "第 ${day.day} 天",
+                text = stringResource(R.string.route_day, day.day),
                 style = MaterialTheme.typography.labelLarge,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary,

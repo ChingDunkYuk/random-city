@@ -20,8 +20,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.randomcity.app.AppContainer
+import com.randomcity.app.R
 import com.randomcity.app.navigation.viewModelFactory
 import com.randomcity.app.ui.home.HomeScreen
 import com.randomcity.app.ui.home.HomeViewModel
@@ -56,10 +58,10 @@ fun MainScreen(
                             } else {
                                 Icons.Outlined.Explore
                             },
-                            contentDescription = "发现"
+                            contentDescription = stringResource(R.string.tab_discover)
                         )
                     },
-                    label = { Text("发现") }
+                    label = { Text(stringResource(R.string.tab_discover)) }
                 )
                 NavigationBarItem(
                     selected = selectedTab == TAB_SAVED,
@@ -71,10 +73,10 @@ fun MainScreen(
                             } else {
                                 Icons.Outlined.FavoriteBorder
                             },
-                            contentDescription = "收藏"
+                            contentDescription = stringResource(R.string.tab_saved)
                         )
                     },
-                    label = { Text("收藏") }
+                    label = { Text(stringResource(R.string.tab_saved)) }
                 )
             }
         }

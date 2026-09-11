@@ -67,16 +67,24 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
+import com.randomcity.app.R
 import com.randomcity.app.domain.RoutePlanner
 import com.randomcity.app.domain.model.City
+import com.randomcity.app.ui.bestMonthsLabel
+import com.randomcity.app.ui.budgetLabel
+import com.randomcity.app.ui.categoryLabel
 import com.randomcity.app.ui.components.RouteTimeline
 import com.randomcity.app.ui.components.SectionTitle
 import com.randomcity.app.ui.components.TagChip
+import com.randomcity.app.ui.label
+import com.randomcity.app.ui.recommendedDaysLabel
 import com.randomcity.app.ui.theme.CityDisplayStyle
+import com.randomcity.app.ui.weatherLabel
 import com.randomcity.app.util.CityVisuals
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -101,6 +109,16 @@ fun CityResultScreen(
         }
         return
     }
+
+    // 分享文案在 composable 作用域组好(stringResource),onClick 只负责发 Intent
+    val shareText = stringResource(
+        R.string.share_template,
+        "${city.localName} ${city.name}",
+        city.countryLocal.ifBlank { city.country },
+        city.country,
+        city.tags.take(3).map { it.label() }.joinToString(" · "),
+        city.recommendedDaysLabel()
+    )
 
     Column(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -133,7 +151,7 @@ fun CityResultScreen(
                         haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                         viewModel.toggleSave()
                     },
-                    onShare = { shareCity(context, city) }
+                    onShare = { shareCity(context, shareText) }
                 )
             }
 
@@ -172,7 +190,7 @@ fun CityResultScreen(
                             )
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = "现在 ${w.temperatureC}°C · ${w.description}",
+                                text = stringResource(R.string.city_weather_now, w.temperatureC, weatherLabel(w.weatherCode)),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -192,7 +210,7 @@ fun CityResultScreen(
 
                 // 必去景点(计划§15):chips 紧凑排列
                 if (city.attractions.isNotEmpty()) {
-                    SectionTitle("必去景点", icon = Icons.Outlined.LocationOn)
+                    SectionTitle(stringResource(R.string.city_section_attractions), icon = Icons.Outlined.LocationOn)
                     Spacer(modifier = Modifier.height(8.dp))
                     FlowRow(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -208,7 +226,7 @@ fun CityResultScreen(
 
                 // 当地美食(计划§16):雾青 chips 与景点区分
                 if (city.foods.isNotEmpty()) {
-                    SectionTitle("当地美食", icon = Icons.Outlined.Restaurant)
+                    SectionTitle(stringResource(R.string.city_section_foods), icon = Icons.Outlined.Restaurant)
                     Spacer(modifier = Modifier.height(8.dp))
                     FlowRow(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -224,7 +242,7 @@ fun CityResultScreen(
 
                 // 住在哪里(v0.3,计划§23):呼吸感列表
                 if (city.stayAreas.isNotEmpty()) {
-                    SectionTitle("住在哪里", icon = Icons.Outlined.Hotel)
+                    SectionTitle(stringResource(R.string.city_section_stay), icon = Icons.Outlined.Hotel)
                     Spacer(modifier = Modifier.height(10.dp))
                     city.stayAreas.forEach { area ->
                         Column(modifier = Modifier.padding(vertical = 4.dp)) {
@@ -248,7 +266,7 @@ fun CityResultScreen(
 
                 // 当地交通(v0.3,计划§24)
                 if (city.transportTips.isNotEmpty()) {
-                    SectionTitle("当地交通", icon = Icons.Outlined.DirectionsBus)
+                    SectionTitle(stringResource(R.string.city_section_transport), icon = Icons.Outlined.DirectionsBus)
                     Spacer(modifier = Modifier.height(8.dp))
                     FlowRow(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -265,7 +283,7 @@ fun CityResultScreen(
                 // 建议路线(v0.5,计划§27-28)
                 val route = remember(city.id) { RoutePlanner.suggestRoute(city) }
                 if (route.isNotEmpty()) {
-                    SectionTitle("建议路线", icon = Icons.Outlined.Route)
+                    SectionTitle(stringResource(R.string.city_section_route), icon = Icons.Outlined.Route)
                     Spacer(modifier = Modifier.height(8.dp))
                     RouteTimeline(route = route)
                     Spacer(modifier = Modifier.height(12.dp))
@@ -273,7 +291,7 @@ fun CityResultScreen(
 
                 // 旅行贴士(v0.3,计划§25)
                 if (city.travelTips.isNotEmpty()) {
-                    SectionTitle("旅行贴士", icon = Icons.Outlined.Lightbulb)
+                    SectionTitle(stringResource(R.string.city_section_tips), icon = Icons.Outlined.Lightbulb)
                     Spacer(modifier = Modifier.height(8.dp))
                     city.travelTips.forEach { tip ->
                         Row(
@@ -282,7 +300,7 @@ fun CityResultScreen(
                                 .padding(vertical = 3.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            TagChip(label = tip.categoryLabel)
+                            TagChip(label = tip.categoryLabel())
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
                                 text = tip.text,
@@ -295,22 +313,22 @@ fun CityResultScreen(
                 }
 
                 // 出行链接(v0.9,计划§43):地图/机票/酒店/餐饮
-                SectionTitle("出行链接", icon = Icons.Outlined.TravelExplore)
+                SectionTitle(stringResource(R.string.city_section_links), icon = Icons.Outlined.TravelExplore)
                 Spacer(modifier = Modifier.height(10.dp))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    ExternalLinkButton("地图", Icons.Outlined.Map, Modifier.weight(1f)) {
+                    ExternalLinkButton(stringResource(R.string.city_link_map), Icons.Outlined.Map, Modifier.weight(1f)) {
                         openInMaps(context, city)
                     }
-                    ExternalLinkButton("机票", Icons.Outlined.Flight, Modifier.weight(1f)) {
+                    ExternalLinkButton(stringResource(R.string.city_link_flights), Icons.Outlined.Flight, Modifier.weight(1f)) {
                         openExternal(context, "https://www.google.com/travel/flights?q=" + Uri.encode("Flights to ${city.name}"))
                     }
-                    ExternalLinkButton("酒店", Icons.Outlined.Hotel, Modifier.weight(1f)) {
+                    ExternalLinkButton(stringResource(R.string.city_link_hotel), Icons.Outlined.Hotel, Modifier.weight(1f)) {
                         openExternal(context, "https://www.booking.com/searchresults.html?ss=" + Uri.encode(city.name))
                     }
-                    ExternalLinkButton("餐饮", Icons.Outlined.Restaurant, Modifier.weight(1f)) {
+                    ExternalLinkButton(stringResource(R.string.city_link_food), Icons.Outlined.Restaurant, Modifier.weight(1f)) {
                         openExternal(context, "https://www.google.com/maps/search/restaurants+in+" + Uri.encode(city.name))
                     }
                 }
@@ -338,7 +356,7 @@ fun CityResultScreen(
             )
             Spacer(modifier = Modifier.width(8.dp))
             Text(
-                text = if (rolling) "抽取中…" else "再抽一个",
+                text = stringResource(if (rolling) R.string.rolling else R.string.city_random_again),
                 fontSize = 17.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -366,10 +384,10 @@ private fun QuickInfoRow(city: City) {
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            QuickInfoCell("天数", city.recommendedDaysLabel)
-            QuickInfoCell("最佳时间", city.bestMonthsLabel)
-            QuickInfoCell("预算", city.budgetLabel)
-            QuickInfoCell("交通", "★".repeat(city.transportScore.coerceIn(1, 5)))
+            QuickInfoCell(stringResource(R.string.city_quick_days), city.recommendedDaysLabel())
+            QuickInfoCell(stringResource(R.string.city_quick_best_time), city.bestMonthsLabel())
+            QuickInfoCell(stringResource(R.string.city_quick_budget), city.budgetLabel())
+            QuickInfoCell(stringResource(R.string.city_quick_transport), "★".repeat(city.transportScore.coerceIn(1, 5)))
         }
     }
 }
@@ -432,7 +450,7 @@ private fun CityHeroHeader(
             IconButton(onClick = onBack) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "返回",
+                    contentDescription = stringResource(R.string.cd_back),
                     tint = Color.White
                 )
             }
@@ -440,14 +458,14 @@ private fun CityHeroHeader(
                 IconButton(onClick = onShare) {
                     Icon(
                         imageVector = Icons.Outlined.Share,
-                        contentDescription = "分享",
+                        contentDescription = stringResource(R.string.cd_share),
                         tint = Color.White
                     )
                 }
                 IconButton(onClick = onToggleSave) {
                     Icon(
                         imageVector = if (isSaved) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                        contentDescription = if (isSaved) "取消收藏" else "收藏",
+                        contentDescription = stringResource(if (isSaved) R.string.cd_unsave else R.string.cd_save),
                         tint = Color.White
                     )
                 }
@@ -487,7 +505,7 @@ private fun CityHeroHeader(
             Spacer(modifier = Modifier.height(10.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 city.tags.take(4).forEach { tag ->
-                    TagChip(label = tag.label, onDark = true)
+                    TagChip(label = tag.label(), onDark = true)
                 }
             }
         }
@@ -541,14 +559,8 @@ private fun openExternal(context: Context, url: String) {
     }
 }
 
-/** 分享城市(§44,中文格式)。 */
-private fun shareCity(context: Context, city: City) {
-    val text = buildString {
-        append("我在 Random City 发现了 ${city.localName} ${city.name} 🌏\n")
-        append("${city.countryLocal.ifBlank { city.country }} ${city.country}\n")
-        append(city.tags.take(3).joinToString(" · ") { it.label })
-        append("\n建议游玩:${city.recommendedDaysLabel}")
-    }
+/** 分享城市(§44):文案在 composable 作用域组好传入,此处只发 Intent。 */
+private fun shareCity(context: Context, text: String) {
     val sendIntent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
         putExtra(Intent.EXTRA_TEXT, text)

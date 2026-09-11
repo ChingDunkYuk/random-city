@@ -1,3 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Random City</string>
+    <string name="tagline">探索意想不到的地方</string>
+
+    <!-- 底部导航 / Tab -->
+    <string name="tab_discover">发现</string>
+    <string name="tab_saved">收藏</string>
+    <string name="tab_history">历史</string>
+
+    <!-- 首页 -->
+    <string name="home_subtitle">下一站,去哪呢?</string>
+    <string name="home_random">随机</string>
+    <string name="rolling">抽取中…</string>
+    <string name="home_filter">筛选</string>
+    <string name="home_surprise">惊喜一下</string>
+    <string name="home_empty_result">没有匹配的城市,试试放宽筛选</string>
+    <string name="home_section_mood">按心情探索</string>
+    <string name="home_section_featured">精选城市</string>
+    <string name="mood_food">美食之旅</string>
+
+    <!-- 筛选 -->
+    <string name="filter_title">筛选</string>
+    <string name="filter_section_continent">大洲</string>
+    <string name="filter_section_style">旅行风格</string>
+    <string name="filter_section_budget">预算</string>
+    <string name="filter_reset">重置</string>
+    <string name="filter_done">完成</string>
+
+    <!-- 城市详情 -->
+    <string name="city_section_attractions">必去景点</string>
+    <string name="city_section_foods">当地美食</string>
+    <string name="city_section_stay">住在哪里</string>
+    <string name="city_section_transport">当地交通</string>
+    <string name="city_section_route">建议路线</string>
+    <string name="city_section_tips">旅行贴士</string>
+    <string name="city_section_links">出行链接</string>
+    <string name="city_link_map">地图</string>
+    <string name="city_link_flights">机票</string>
+    <string name="city_link_hotel">酒店</string>
+    <string name="city_link_food">餐饮</string>
+    <string name="city_random_again">再抽一个</string>
+    <string name="city_quick_days">天数</string>
+    <string name="city_quick_best_time">最佳时间</string>
+    <string name="city_quick_budget">预算</string>
+    <string name="city_quick_transport">交通</string>
+    <string name="city_weather_now">现在 %1$d°C · %2$s</string>
+    <string name="route_day">第 %1$d 天</string>
+    <string name="cd_back">返回</string>
+    <string name="cd_share">分享</string>
+    <string name="cd_save">收藏</string>
+    <string name="cd_unsave">取消收藏</string>
+
+    <!-- 分享 -->
+    <string name="share_template">我在 Random City 发现了 %1$s 🌏\n%2$s %3$s\n%4$s\n建议游玩:%5$s</string>
+
+    <!-- 收藏 / 历史 -->
+    <string name="saved_search_hint">搜索城市或国家</string>
+    <string name="saved_empty_saved">还没有收藏城市\n去随机一个吧</string>
+    <string name="saved_empty_search">没有匹配的收藏</string>
+    <string name="saved_empty_history">还没有浏览记录</string>
+    <string name="saved_sort">排序</string>
+    <string name="saved_sort_time">按收藏时间</string>
+    <string name="saved_sort_name">按名称 A–Z</string>
+    <string name="saved_remove">删除收藏</string>
+    <string name="time_format_saved">M月d日 HH:mm</string>
+
+    <!-- 大洲 -->
+    <string name="continent_asia">亚洲</string>
+    <string name="continent_europe">欧洲</string>
+    <string name="continent_africa">非洲</string>
+    <string name="continent_north_america">北美洲</string>
+    <string name="continent_south_america">南美洲</string>
+    <string name="continent_oceania">大洋洲</string>
+
+    <!-- 旅行风格标签 -->
+    <string name="tag_food">美食</string>
+    <string name="tag_history">历史</string>
+    <string name="tag_nature">自然</string>
+    <string name="tag_beach">海岛</string>
+    <string name="tag_city">都市</string>
+    <string name="tag_nightlife">夜生活</string>
+    <string name="tag_photography">摄影</string>
+    <string name="tag_adventure">探险</string>
+    <string name="tag_budget">穷游</string>
+
+    <!-- 贴士分类 -->
+    <string name="tip_category_payment">支付</string>
+    <string name="tip_category_language">语言</string>
+    <string name="tip_category_currency">货币</string>
+    <string name="tip_category_safety">安全</string>
+    <string name="tip_category_plug">插座</string>
+    <string name="tip_category_transport">交通</string>
+    <string name="tip_category_visa">签证</string>
+
+    <!-- 预算 -->
+    <string name="budget_1">¥300–600</string>
+    <string name="budget_2">¥600–1200</string>
+    <string name="budget_3">¥1200–2500</string>
+    <string name="budget_4">¥2500+</string>
+    <string name="budget_per_day_1">¥300–600/天</string>
+    <string name="budget_per_day_2">¥600–1200/天</string>
+    <string name="budget_per_day_3">¥1200–2500/天</string>
+    <string name="budget_per_day_4">¥2500+/天</string>
+
+    <!-- 天数 / 月份 -->
+    <string name="label_all_year">全年</string>
+    <string name="month_single">%1$d月</string>
+    <string name="month_range">%1$d–%2$d月</string>
+    <string name="days_single">%1$d 天</string>
+    <string name="days_range">%1$d–%2$d 天</string>
+
+    <!-- 天气(WMO weathercode) -->
+    <string name="weather_clear">晴</string>
+    <string name="weather_cloudy">多云</string>
+    <string name="weather_overcast">阴</string>
+    <string name="weather_fog">雾</string>
+    <string name="weather_drizzle">毛毛雨</string>
+    <string name="weather_rain">雨</string>
+    <string name="weather_snow">雪</string>
+    <string name="weather_showers">阵雨</string>
+    <string name="weather_snow_showers">阵雪</string>
+    <string name="weather_thunder">雷雨</string>
+    <string name="weather_unknown">未知</string>
 </resources>

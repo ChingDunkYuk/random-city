@@ -20,12 +20,15 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.randomcity.app.R
 import com.randomcity.app.domain.model.CityFilter
 import com.randomcity.app.domain.model.Continent
 import com.randomcity.app.domain.model.TravelTag
-import com.randomcity.app.domain.model.budgetRangeLabel
+import com.randomcity.app.ui.budgetRangeLabel
+import com.randomcity.app.ui.label
 
 /**
  * Random Filters(计划书§30):大洲 / 旅行风格 / 预算,多选。
@@ -45,13 +48,13 @@ fun FilterSheet(
                 .padding(bottom = 32.dp)
         ) {
             Text(
-                text = "筛选",
+                text = stringResource(R.string.filter_title),
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.SemiBold
             )
             Spacer(modifier = Modifier.height(16.dp))
 
-            FilterSection(title = "大洲") {
+            FilterSection(title = stringResource(R.string.filter_section_continent)) {
                 Continent.entries.forEach { continent ->
                     FilterChip(
                         selected = continent in filter.continents,
@@ -60,28 +63,28 @@ fun FilterSheet(
                                 filter.copy(continents = filter.continents.toggle(continent))
                             )
                         },
-                        label = { Text(continent.label) }
+                        label = { Text(continent.label()) }
                     )
                 }
             }
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            FilterSection(title = "旅行风格") {
+            FilterSection(title = stringResource(R.string.filter_section_style)) {
                 TravelTag.entries.forEach { tag ->
                     FilterChip(
                         selected = tag in filter.styles,
                         onClick = {
                             onFilterChange(filter.copy(styles = filter.styles.toggle(tag)))
                         },
-                        label = { Text(tag.label) }
+                        label = { Text(tag.label()) }
                     )
                 }
             }
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            FilterSection(title = "预算") {
+            FilterSection(title = stringResource(R.string.filter_section_budget)) {
                 (1..4).forEach { level ->
                     FilterChip(
                         selected = level in filter.budgets,
@@ -101,13 +104,13 @@ fun FilterSheet(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TextButton(onClick = { onFilterChange(CityFilter.EMPTY) }) {
-                    Text("重置")
+                    Text(stringResource(R.string.filter_reset))
                 }
                 Button(
                     onClick = onDismiss,
                     shape = RoundedCornerShape(50)
                 ) {
-                    Text("完成")
+                    Text(stringResource(R.string.filter_done))
                 }
             }
         }

@@ -17,10 +17,10 @@ import okhttp3.Request
 import java.net.URLEncoder
 import java.util.concurrent.TimeUnit
 
-/** 当前天气(Open-Meteo)。 */
+/** 当前天气(Open-Meteo);weatherCode 为 WMO 代码,展示文案由 UI 层按 locale 映射。 */
 data class CurrentWeather(
     val temperatureC: Int,
-    val description: String
+    val weatherCode: Int
 )
 
 /**
@@ -37,7 +37,7 @@ class CityRemoteRepository(assets: AssetManager) {
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    /** 内置城市图清单(assets/city_images 下的 jpg,离线可用、必铺满)。 */
+    /** 内置城市图清单(assets/city_images 下的 webp,离线可用、必铺满)。 */
     private val bundledImages: Set<String> =
         runCatching { assets.list("city_images")?.toSet() ?: emptySet() }
             .getOrDefault(emptySet())
@@ -50,9 +50,9 @@ class CityRemoteRepository(assets: AssetManager) {
         englishName: String,
         imageKeywords: List<String> = emptyList()
     ): String? = withContext(Dispatchers.IO) {
-        // 内置 asset:离线、零延迟、已精确裁剪 800x450
-        if ("$cityId.jpg" in bundledImages) {
-            return@withContext "file:///android_asset/city_images/$cityId.jpg"
+        // 内置 asset:离线、零延迟、已精确裁剪 800x450 的 WebP
+        if ("$cityId.webp" in bundledImages) {
+            return@withContext "file:///android_asset/city_images/$cityId.webp"
         }
         imageCache.get(englishName)?.let { return@withContext it }
         // 远程兜底(未内置城市):Wikipedia → Openverse
@@ -113,7 +113,7 @@ class CityRemoteRepository(assets: AssetManager) {
                 val code = current["weathercode"]?.jsonPrimitive?.intOrNull ?: 0
                 CurrentWeather(
                     temperatureC = temp.toInt(),
-                    description = weatherDescription(code)
+                    weatherCode = code
                 )
             }.getOrNull()
         }
@@ -126,21 +126,6 @@ class CityRemoteRepository(assets: AssetManager) {
         return client.newCall(request).execute().use { response ->
             if (response.isSuccessful) response.body?.string() else null
         }
-    }
-
-    /** WMO weathercode → 中文描述。 */
-    private fun weatherDescription(code: Int): String = when (code) {
-        0 -> "晴"
-        1, 2 -> "多云"
-        3 -> "阴"
-        45, 48 -> "雾"
-        in 51..57 -> "毛毛雨"
-        in 61..67 -> "雨"
-        in 71..77 -> "雪"
-        in 80..82 -> "阵雨"
-        85, 86 -> "阵雪"
-        in 95..99 -> "雷雨"
-        else -> "未知"
     }
 
     companion object {

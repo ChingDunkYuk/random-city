@@ -42,12 +42,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.randomcity.app.R
 import com.randomcity.app.data.repository.HistoryItem
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.ui.components.CityImage
+import com.randomcity.app.ui.label
 import com.randomcity.app.util.CityVisuals
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -80,7 +83,7 @@ fun SavedScreen(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = if (selectedTab == TAB_SAVED) "收藏" else "历史",
+                text = stringResource(if (selectedTab == TAB_SAVED) R.string.tab_saved else R.string.tab_history),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold
             )
@@ -89,7 +92,7 @@ fun SavedScreen(
                     IconButton(onClick = { sortMenuOpen = true }) {
                         Icon(
                             imageVector = Icons.Outlined.Sort,
-                            contentDescription = "排序",
+                            contentDescription = stringResource(R.string.saved_sort),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
@@ -101,7 +104,12 @@ fun SavedScreen(
                             DropdownMenuItem(
                                 text = {
                                     Text(
-                                        text = option.label,
+                                        text = stringResource(
+                                            when (option) {
+                                                SavedSort.TIME_DESC -> R.string.saved_sort_time
+                                                SavedSort.NAME_ASC -> R.string.saved_sort_name
+                                            }
+                                        ),
                                         color = if (option == sort) {
                                             MaterialTheme.colorScheme.primary
                                         } else {
@@ -130,12 +138,12 @@ fun SavedScreen(
             FilterChip(
                 selected = selectedTab == TAB_SAVED,
                 onClick = { selectedTab = TAB_SAVED },
-                label = { Text("收藏") }
+                label = { Text(stringResource(R.string.tab_saved)) }
             )
             FilterChip(
                 selected = selectedTab == TAB_HISTORY,
                 onClick = { selectedTab = TAB_HISTORY },
-                label = { Text("历史") }
+                label = { Text(stringResource(R.string.tab_history)) }
             )
         }
 
@@ -173,7 +181,7 @@ private fun SavedTab(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 24.dp),
-            placeholder = { Text("搜索城市或国家") },
+            placeholder = { Text(stringResource(R.string.saved_search_hint)) },
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Outlined.Search,
@@ -195,11 +203,9 @@ private fun SavedTab(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = if (query.isBlank()) {
-                        "还没有收藏城市\n去随机一个吧"
-                    } else {
-                        "没有匹配的收藏"
-                    },
+                    text = stringResource(
+                        if (query.isBlank()) R.string.saved_empty_saved else R.string.saved_empty_search
+                    ),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -216,7 +222,7 @@ private fun SavedTab(
                             IconButton(onClick = { onRemove(city.id) }) {
                                 Icon(
                                     imageVector = Icons.Outlined.DeleteOutline,
-                                    contentDescription = "删除收藏",
+                                    contentDescription = stringResource(R.string.saved_remove),
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
@@ -242,13 +248,14 @@ private fun HistoryTab(
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "还没有浏览记录",
+                text = stringResource(R.string.saved_empty_history),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     } else {
-        val timeFormat = remember { SimpleDateFormat("M月d日 HH:mm", Locale.CHINA) }
+        val timePattern = stringResource(R.string.time_format_saved)
+        val timeFormat = remember(timePattern) { SimpleDateFormat(timePattern, Locale.getDefault()) }
         LazyColumn(
             contentPadding = PaddingValues(horizontal = 24.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -312,7 +319,7 @@ private fun CityRowCard(
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
                     text = "${city.countryLocal.ifBlank { city.country }} · " +
-                        city.tags.take(3).joinToString(" · ") { it.label },
+                        city.tags.take(3).map { it.label() }.joinToString(" · "),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontSize = 12.sp

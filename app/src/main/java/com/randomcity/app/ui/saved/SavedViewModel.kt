@@ -14,10 +14,10 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-/** 收藏排序方式。 */
-enum class SavedSort(val label: String) {
-    TIME_DESC("按收藏时间"),
-    NAME_ASC("按名称 A–Z")
+/** 收藏排序方式(展示文案在 UI 层经 stringResource 取)。 */
+enum class SavedSort {
+    TIME_DESC,
+    NAME_ASC
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

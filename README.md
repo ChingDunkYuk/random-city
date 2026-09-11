@@ -61,8 +61,10 @@
 ```
 app/src/main/
 ├─ assets/
-│  ├─ cities.json            # 103 城完整数据(景点/美食/住宿/路线/贴士…)
-│  └─ city_images/           # 103 张内置代表图(800×450,人工质检)
+│  ├─ data/
+│  │  ├─ cities.json         # 103 城结构数据(id/坐标/天数/预算/标签…)
+│  │  └─ cities_zh.json      # 103 城中文文案(景点/美食/住宿/路线/贴士…)
+│  └─ city_images/           # 103 张内置代表图(WebP 800×450,人工质检)
 └─ java/com/randomcity/app/
    ├─ data/                  # Room / 远程仓库(天气) / Repository
    ├─ domain/                # 模型 / RandomEngine / RoutePlanner
@@ -70,7 +72,7 @@ app/src/main/
    └─ navigation/
 
 docs/plans/                  # v0.1 → v1.0 各阶段开发计划
-tools/                       # 城市图批量下载/修复脚本(PowerShell)
+tools/                       # 城市图片管线(city_images.py,Python+Pillow)
 ```
 
 ## 开发历程
@@ -79,7 +81,7 @@ tools/                       # 城市图批量下载/修复脚本(PowerShell)
 
 `v0.1 MVP` → `v0.3 详情增强` → `v0.5 建议路线` → `v0.6 筛选` → `v0.7 发现页` → `v0.8 收藏/历史` → `v0.9 联网与图片` → `v0.9.5 动效` → `v1.0 RC` → `v1.0 正式版`
 
-详见 [docs/plans](docs/plans)。
+各版本更新内容见 [CHANGELOG.md](CHANGELOG.md);阶段开发计划见 [docs/plans](docs/plans)。
 
 ## 素材许可
 

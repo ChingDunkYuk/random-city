@@ -7,6 +7,9 @@ import com.randomcity.app.data.local.entity.CityEntity
 import com.randomcity.app.data.local.entity.CityHistoryEntity
 import com.randomcity.app.data.model.CityDataSet
 import com.randomcity.app.data.model.CityDto
+import com.randomcity.app.data.model.CityStructureDataSet
+import com.randomcity.app.data.model.CityTextDataSet
+import com.randomcity.app.data.model.mergeCities
 import com.randomcity.app.domain.RandomEngine
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.domain.model.CityFilter
@@ -36,7 +39,7 @@ class CityRepository(
     private val json: Json
 ) {
 
-    /** 首次启动或数据版本变化时,从 assets/cities.json 导入 Room。 */
+    /** 首次启动或数据版本变化时,从 assets/data/ 导入 Room(结构层 + 文案层合并)。 */
     suspend fun ensureImported() = withContext(Dispatchers.IO) {
         val dataSet = parseAssets()
         val imported = settings.citySchemaVersion()
@@ -48,9 +51,16 @@ class CityRepository(
         }
     }
 
+    /**
+     * v1.1:结构层(data/cities.json,机器字段)+ 文案层(data/cities_zh.json,展示字符串)
+     * 按 id 合并为完整 CityDto;Room/UI 无感知。加语言 = 新增同格式文案文件。
+     */
     private fun parseAssets(): CityDataSet {
-        val text = context.assets.open("cities.json").bufferedReader().use { it.readText() }
-        return json.decodeFromString(CityDataSet.serializer(), text)
+        val structureText = context.assets.open("data/cities.json").bufferedReader().use { it.readText() }
+        val textText = context.assets.open("data/cities_zh.json").bufferedReader().use { it.readText() }
+        val structure = json.decodeFromString(CityStructureDataSet.serializer(), structureText)
+        val text = json.decodeFromString(CityTextDataSet.serializer(), textText)
+        return mergeCities(structure, text)
     }
 
     suspend fun getAllIds(): List<String> = withContext(Dispatchers.IO) {
