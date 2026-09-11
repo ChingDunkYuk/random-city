@@ -23,16 +23,6 @@
 - MVVM + Repository + 手动 DI(无 Hilt)
 - JUnit 数据完整性测试(城市数据/内置图一一对应)
 
-## 构建
-
-```powershell
-.\gradlew.bat assembleDebug      # 调试包
-.\gradlew.bat assembleRelease    # 发布包(RandomCity-v{version}.apk)
-.\gradlew.bat testDebugUnitTest  # 单测
-```
-
-Release 签名:在根目录放置 `keystore.properties`(`storeFile` / `storePassword` / `keyAlias` / `keyPassword` 四个字段)与自己的 `keystore.jks`;不存在时自动回落 debug 签名。签名材料已列入 `.gitignore`,请勿提交。
-
 ## 项目结构
 
 ```
