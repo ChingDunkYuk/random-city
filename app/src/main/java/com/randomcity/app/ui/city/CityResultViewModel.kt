@@ -2,6 +2,8 @@ package com.randomcity.app.ui.city
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.randomcity.app.data.remote.CityRemoteRepository
+import com.randomcity.app.data.remote.CurrentWeather
 import com.randomcity.app.data.repository.CityRepository
 import com.randomcity.app.data.repository.SavedRepository
 import com.randomcity.app.data.repository.SettingsRepository
@@ -23,7 +25,8 @@ class CityResultViewModel(
     private val cityId: String,
     private val cityRepository: CityRepository,
     private val savedRepository: SavedRepository,
-    settingsRepository: SettingsRepository
+    settingsRepository: SettingsRepository,
+    private val remoteRepository: CityRemoteRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(CityResultUiState())
@@ -38,12 +41,34 @@ class CityResultViewModel(
     private val filter = settingsRepository.cityFilter
         .stateIn(viewModelScope, SharingStarted.Eagerly, CityFilter.EMPTY)
 
+    /** 城市图片 URL(v0.9,失败为 null → UI 回落渐变)。 */
+    private val _imageUrl = MutableStateFlow<String?>(null)
+    val imageUrl: StateFlow<String?> = _imageUrl.asStateFlow()
+
+    /** 当前天气(v0.9,失败为 null → UI 隐藏该行)。 */
+    private val _weather = MutableStateFlow<CurrentWeather?>(null)
+    val weather: StateFlow<CurrentWeather?> = _weather.asStateFlow()
+
     init {
         viewModelScope.launch {
-            _uiState.value = CityResultUiState(
-                loading = false,
-                city = cityRepository.getCity(cityId)
-            )
+            val city = cityRepository.getCity(cityId)
+            _uiState.value = CityResultUiState(loading = false, city = city)
+            if (city != null) {
+                // 图片与天气并行拉取,各自独立失败(§42 不影响页面)
+                launch {
+                    _imageUrl.value = remoteRepository.fetchCityImageUrl(
+                        city.id,
+                        city.name,
+                        city.imageKeywords
+                    )
+                }
+                launch {
+                    _weather.value = remoteRepository.fetchCurrentWeather(
+                        city.latitude,
+                        city.longitude
+                    )
+                }
+            }
         }
     }
 

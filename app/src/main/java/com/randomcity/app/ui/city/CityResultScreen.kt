@@ -1,6 +1,10 @@
 package com.randomcity.app.ui.city
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,12 +28,17 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.outlined.Casino
+import androidx.compose.material.icons.outlined.Cloud
 import androidx.compose.material.icons.outlined.DirectionsBus
+import androidx.compose.material.icons.outlined.Flight
 import androidx.compose.material.icons.outlined.Hotel
 import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material.icons.outlined.LocationOn
+import androidx.compose.material.icons.outlined.Map
 import androidx.compose.material.icons.outlined.Restaurant
 import androidx.compose.material.icons.outlined.Route
+import androidx.compose.material.icons.outlined.Share
+import androidx.compose.material.icons.outlined.TravelExplore
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -37,6 +46,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -44,11 +54,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.rememberAsyncImagePainter
 import com.randomcity.app.domain.RoutePlanner
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.ui.components.RouteTimeline
@@ -67,6 +82,9 @@ fun CityResultScreen(
     val uiState by viewModel.uiState.collectAsState()
     val isSaved by viewModel.isSaved.collectAsState()
     val rolling by viewModel.rolling.collectAsState()
+    val imageUrl by viewModel.imageUrl.collectAsState()
+    val weather by viewModel.weather.collectAsState()
+    val context = LocalContext.current
 
     val city = uiState.city
     if (uiState.loading || city == null) {
@@ -85,8 +103,10 @@ fun CityResultScreen(
             CityHeroHeader(
                 city = city,
                 isSaved = isSaved,
+                imageUrl = imageUrl,
                 onBack = onBack,
-                onToggleSave = viewModel::toggleSave
+                onToggleSave = viewModel::toggleSave,
+                onShare = { shareCity(context, city) }
             )
 
             Column(modifier = Modifier.padding(horizontal = 20.dp)) {
@@ -103,6 +123,25 @@ fun CityResultScreen(
 
                 // Quick Info:单卡四列一行,避免纵向堆叠(计划§14.2)
                 QuickInfoRow(city)
+
+                // 当前天气(v0.9,计划§42):Optional,失败整行隐藏
+                weather?.let { w ->
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Outlined.Cloud,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.secondary,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            text = "现在 ${w.temperatureC}°C · ${w.description}",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
 
                 Spacer(modifier = Modifier.height(14.dp))
 
@@ -209,6 +248,28 @@ fun CityResultScreen(
                     }
                     Spacer(modifier = Modifier.height(16.dp))
                 }
+
+                // 出行链接(v0.9,计划§43):地图/机票/酒店/餐饮
+                SectionTitle("出行链接", icon = Icons.Outlined.TravelExplore)
+                Spacer(modifier = Modifier.height(10.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
+                    ExternalLinkButton("地图", Icons.Outlined.Map, Modifier.weight(1f)) {
+                        openInMaps(context, city)
+                    }
+                    ExternalLinkButton("机票", Icons.Outlined.Flight, Modifier.weight(1f)) {
+                        openExternal(context, "https://www.google.com/travel/flights?q=" + Uri.encode("Flights to ${city.name}"))
+                    }
+                    ExternalLinkButton("酒店", Icons.Outlined.Hotel, Modifier.weight(1f)) {
+                        openExternal(context, "https://www.booking.com/searchresults.html?ss=" + Uri.encode(city.name))
+                    }
+                    ExternalLinkButton("餐饮", Icons.Outlined.Restaurant, Modifier.weight(1f)) {
+                        openExternal(context, "https://www.google.com/maps/search/restaurants+in+" + Uri.encode(city.name))
+                    }
+                }
+                Spacer(modifier = Modifier.height(20.dp))
             }
         }
 
@@ -285,8 +346,10 @@ private fun QuickInfoCell(title: String, value: String) {
 private fun CityHeroHeader(
     city: City,
     isSaved: Boolean,
+    imageUrl: String?,
     onBack: () -> Unit,
-    onToggleSave: () -> Unit
+    onToggleSave: () -> Unit,
+    onShare: () -> Unit
 ) {
     val (start, end) = CityVisuals.gradientFor(city.id)
     Box(
@@ -295,6 +358,18 @@ private fun CityHeroHeader(
             .height(220.dp)
             .background(Brush.linearGradient(listOf(start, end)))
     ) {
+        // 远程城市图片(v0.9):paint 按 Crop 绘制进布局矩形,确定性铺满;失败回落渐变(§41)
+        if (imageUrl != null) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .paint(
+                        painter = rememberAsyncImagePainter(model = imageUrl),
+                        contentScale = ContentScale.Crop
+                    )
+            )
+        }
+
         // 顶部操作栏
         Row(
             modifier = Modifier
@@ -311,12 +386,21 @@ private fun CityHeroHeader(
                     tint = Color.White
                 )
             }
-            IconButton(onClick = onToggleSave) {
-                Icon(
-                    imageVector = if (isSaved) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                    contentDescription = if (isSaved) "取消收藏" else "收藏",
-                    tint = Color.White
-                )
+            Row {
+                IconButton(onClick = onShare) {
+                    Icon(
+                        imageVector = Icons.Outlined.Share,
+                        contentDescription = "分享",
+                        tint = Color.White
+                    )
+                }
+                IconButton(onClick = onToggleSave) {
+                    Icon(
+                        imageVector = if (isSaved) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                        contentDescription = if (isSaved) "取消收藏" else "收藏",
+                        tint = Color.White
+                    )
+                }
             }
         }
 
@@ -357,5 +441,69 @@ private fun CityHeroHeader(
                 }
             }
         }
+    }
+}
+
+/** 出行链接小按钮。 */
+@Composable
+private fun ExternalLinkButton(
+    label: String,
+    icon: ImageVector,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    OutlinedButton(
+        onClick = onClick,
+        modifier = modifier,
+        shape = RoundedCornerShape(14.dp)
+    ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                modifier = Modifier.size(20.dp)
+            )
+            Text(text = label, style = MaterialTheme.typography.labelMedium)
+        }
+    }
+}
+
+/** 系统地图打开城市位置,无地图应用时回退浏览器(§43)。 */
+private fun openInMaps(context: Context, city: City) {
+    val label = Uri.encode(city.name)
+    val geoIntent = Intent(
+        Intent.ACTION_VIEW,
+        Uri.parse("geo:${city.latitude},${city.longitude}?q=${city.latitude},${city.longitude}($label)")
+    )
+    if (geoIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(geoIntent)
+    } else {
+        openExternal(
+            context,
+            "https://www.google.com/maps/search/?api=1&query=${city.latitude},${city.longitude}"
+        )
+    }
+}
+
+private fun openExternal(context: Context, url: String) {
+    runCatching {
+        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+    }
+}
+
+/** 分享城市(§44,中文格式)。 */
+private fun shareCity(context: Context, city: City) {
+    val text = buildString {
+        append("我在 Random City 发现了 ${city.localName} ${city.name} 🌏\n")
+        append("${city.countryLocal.ifBlank { city.country }} ${city.country}\n")
+        append(city.tags.take(3).joinToString(" · ") { it.label })
+        append("\n建议游玩:${city.recommendedDaysLabel}")
+    }
+    val sendIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, text)
+    }
+    runCatching {
+        context.startActivity(Intent.createChooser(sendIntent, null))
     }
 }

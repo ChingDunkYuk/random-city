@@ -97,12 +97,34 @@ data class City(
             return ranges.joinToString(" · ")
         }
 
-    val budgetLabel: String get() = "$".repeat(budgetLevel.coerceIn(1, 4))
+    /** 每日预算区间(v0.9.1):比 $ 图标更直观。 */
+    val budgetLabel: String
+        get() = when (budgetLevel.coerceIn(1, 4)) {
+            1 -> "¥300–600/天"
+            2 -> "¥600–1200/天"
+            3 -> "¥1200–2500/天"
+            else -> "¥2500+/天"
+        }
+
+    /** 有效推荐天数(v0.9.1):5+ 景点的城市 2–3 天太赶,上调下限。 */
+    val effectiveDaysMin: Int
+        get() = if (attractions.size >= 5) maxOf(recommendedDaysMin, 3) else recommendedDaysMin
+
+    val effectiveDaysMax: Int
+        get() = if (attractions.size >= 5) maxOf(recommendedDaysMax, 4) else recommendedDaysMax
 
     val recommendedDaysLabel: String
-        get() = if (recommendedDaysMin == recommendedDaysMax) {
-            "$recommendedDaysMin 天"
+        get() = if (effectiveDaysMin == effectiveDaysMax) {
+            "$effectiveDaysMin 天"
         } else {
-            "$recommendedDaysMin–$recommendedDaysMax 天"
+            "$effectiveDaysMin–$effectiveDaysMax 天"
         }
+}
+
+/** 预算档位的金额区间(筛选面板用,不带"/天"后缀)。 */
+fun budgetRangeLabel(level: Int): String = when (level.coerceIn(1, 4)) {
+    1 -> "¥300–600"
+    2 -> "¥600–1200"
+    3 -> "¥1200–2500"
+    else -> "¥2500+"
 }

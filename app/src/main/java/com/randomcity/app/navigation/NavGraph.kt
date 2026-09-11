@@ -79,7 +79,8 @@ fun RandomCityNavHost(
                         cityId,
                         container.cityRepository,
                         container.savedRepository,
-                        container.settingsRepository
+                        container.settingsRepository,
+                        container.cityRemoteRepository
                     )
                 }
             )

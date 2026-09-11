@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -48,6 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.randomcity.app.data.repository.HistoryItem
 import com.randomcity.app.domain.model.City
+import com.randomcity.app.ui.components.CityImage
 import com.randomcity.app.util.CityVisuals
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -292,12 +292,16 @@ private fun CityRowCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             val (start, end) = CityVisuals.gradientFor(city.id)
+            // 左侧大矩形缩略图(参考样式),未就绪/失败时回落渐变
             Box(
                 modifier = Modifier
-                    .size(52.dp)
+                    .width(122.dp)
+                    .height(88.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(Brush.linearGradient(listOf(start, end)))
-            )
+            ) {
+                CityImage(city = city, modifier = Modifier.fillMaxSize())
+            }
             Spacer(modifier = Modifier.width(14.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(

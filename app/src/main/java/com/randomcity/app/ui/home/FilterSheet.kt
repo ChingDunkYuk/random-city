@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.randomcity.app.domain.model.CityFilter
 import com.randomcity.app.domain.model.Continent
 import com.randomcity.app.domain.model.TravelTag
+import com.randomcity.app.domain.model.budgetRangeLabel
 
 /**
  * Random Filters(计划书§30):大洲 / 旅行风格 / 预算,多选。
@@ -87,7 +88,7 @@ fun FilterSheet(
                         onClick = {
                             onFilterChange(filter.copy(budgets = filter.budgets.toggle(level)))
                         },
-                        label = { Text("$".repeat(level)) }
+                        label = { Text(budgetRangeLabel(level)) }
                     )
                 }
             }

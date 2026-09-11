@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import com.randomcity.app.data.local.CityDatabase
+import com.randomcity.app.data.remote.CityRemoteRepository
 import com.randomcity.app.data.repository.CityRepository
 import com.randomcity.app.data.repository.SavedRepository
 import com.randomcity.app.data.repository.SettingsRepository
@@ -37,6 +38,8 @@ class AppContainer(context: Context) {
         savedCityDao = database.savedCityDao(),
         cityRepository = cityRepository
     )
+
+    val cityRemoteRepository = CityRemoteRepository(context.applicationContext.assets)
 }
 
 class RandomCityApp : Application() {

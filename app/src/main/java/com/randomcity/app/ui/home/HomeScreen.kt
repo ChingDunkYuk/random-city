@@ -57,6 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.domain.model.TravelTag
+import com.randomcity.app.ui.components.CityImage
 import com.randomcity.app.ui.components.EarthVisual
 import com.randomcity.app.ui.components.SectionTitle
 import com.randomcity.app.util.CityVisuals
@@ -298,6 +299,22 @@ private fun FeaturedCityCard(
             .background(Brush.linearGradient(listOf(start, end)))
             .clickable(onClick = onClick)
     ) {
+        // 真实城市图片:铺满卡片,未就绪/失败时回落渐变
+        CityImage(city = city, modifier = Modifier.fillMaxSize())
+
+        // 底部蒙层:保证白字在图片上可读
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(60.dp)
+                .align(Alignment.BottomCenter)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, Color.Black.copy(alpha = 0.45f))
+                    )
+                )
+        )
+
         Column(
             modifier = Modifier
                 .align(Alignment.BottomStart)
