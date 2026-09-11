@@ -17,3 +17,6 @@ app/build
 # IDE/构建缓存
 .kotlin/
 .trae/
+
+# Python 工具缓存
+__pycache__/

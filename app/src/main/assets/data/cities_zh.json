@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "cities": [
     {
       "id": "tokyo",
@@ -3452,6 +3452,2285 @@
         "打车",
         "渡轮",
         "度假村接送"
+      ]
+    },
+    {
+      "id": "tunis",
+      "localName": "突尼斯市",
+      "countryLocal": "突尼斯",
+      "description": "蓝白小镇的地中海风吹进千年麦地那,迦太基遗迹就在城郊。",
+      "attractions": [
+        "突尼斯麦地那老城",
+        "蓝白小镇西迪布赛义德",
+        "迦太基遗址",
+        "巴尔多国家博物馆"
+      ],
+      "foods": [
+        "古斯古斯",
+        "哈里萨辣酱",
+        "突尼斯砖饼",
+        "薄荷茶"
+      ],
+      "stayAreas": [
+        {
+          "name": "麦地那老城",
+          "note": "氛围浓,传统庭院民宿"
+        },
+        {
+          "name": "新城中心",
+          "note": "交通方便,去迦太基顺路"
+        }
+      ],
+      "transportTips": [
+        "TGM 轻轨",
+        "出租车",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "突尼斯第纳尔,小店多收现金"
+        },
+        {
+          "category": "LANGUAGE",
+          "text": "阿拉伯语/法语通用,英语有限"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["麦地那老城", "巴尔多博物馆"]
+        },
+        {
+          "day": 2,
+          "stops": ["迦太基遗址", "西迪布赛义德"]
+        }
+      ]
+    },
+    {
+      "id": "casablanca",
+      "localName": "卡萨布兰卡",
+      "countryLocal": "摩洛哥",
+      "description": "大西洋边的白色之城,海上清真寺的宣礼塔直指云霄。",
+      "attractions": [
+        "哈桑二世清真寺",
+        "海滨大道",
+        "老麦地那",
+        "圣心大教堂"
+      ],
+      "foods": [
+        "塔吉锅",
+        "古斯古斯",
+        "海鲜",
+        "薄荷茶"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "火车站旁,中转方便"
+        },
+        {
+          "name": "海滨区",
+          "note": "看海散步,夜生活多"
+        }
+      ],
+      "transportTips": [
+        "有轨电车",
+        "出租车",
+        "火车(去马拉喀什)"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "阿拉伯语/法语通用,清真寺参观注意开放时间"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["哈桑二世清真寺", "老麦地那", "海滨大道"]
+        }
+      ]
+    },
+    {
+      "id": "essaouira",
+      "localName": "索维拉",
+      "countryLocal": "摩洛哥",
+      "description": "大西洋风之城,蓝船白墙的渔港,《权力的游戏》取景地。",
+      "attractions": [
+        "索维拉渔港",
+        "麦地那老城(世遗)",
+        "斯卡拉城墙炮台",
+        "索维拉海滩"
+      ],
+      "foods": [
+        "烤沙丁鱼",
+        "海鲜拼盘",
+        "塔吉锅",
+        "摩洛哥沙拉"
+      ],
+      "stayAreas": [
+        {
+          "name": "麦地那内 Riad",
+          "note": "传统庭院民宿,最有味道"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "马车",
+        "出租车"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "常年风大,带防风外套;也是风筝冲浪胜地"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["渔港", "城墙炮台", "麦地那"]
+        }
+      ]
+    },
+    {
+      "id": "dakar",
+      "localName": "达喀尔",
+      "countryLocal": "塞内加尔",
+      "description": "非洲最西端的首都,戈雷岛的奴隶贸易记忆与玫瑰湖的粉色湖水。",
+      "attractions": [
+        "戈雷岛",
+        "非洲复兴纪念碑",
+        "玫瑰湖(雷特巴湖)",
+        "恩戈尔岛海滩"
+      ],
+      "foods": [
+        "塞内加尔鱼饭",
+        "花生酱炖鸡",
+        "猴面包果汁",
+        "烤肉串"
+      ],
+      "stayAreas": [
+        {
+          "name": "阿尔马迪区",
+          "note": "海边安静,餐厅多"
+        },
+        {
+          "name": "市中心",
+          "note": "去戈雷岛码头近"
+        }
+      ],
+      "transportTips": [
+        "出租车",
+        "网约车",
+        "彩色小巴"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "法语为主,学句沃洛夫语问候更受欢迎"
+        },
+        {
+          "category": "SAFETY",
+          "text": "玫瑰湖盐度高,别带伤口下水"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["市区", "非洲复兴纪念碑"]
+        },
+        {
+          "day": 2,
+          "stops": ["戈雷岛", "玫瑰湖"]
+        }
+      ]
+    },
+    {
+      "id": "accra",
+      "localName": "阿克拉",
+      "countryLocal": "加纳",
+      "description": "西非最友善的首都之一,奴隶城堡的海风里有非洲独立的起点。",
+      "attractions": [
+        "海岸角奴隶城堡(一日)",
+        "独立广场(黑星门)",
+        "恩克鲁玛纪念园",
+        "拉巴迪海滩",
+        "马克拉市场"
+      ],
+      "foods": [
+        "Jollof 炖饭",
+        "富富配汤",
+        "烤大蕉",
+        "红豆炖菜"
+      ],
+      "stayAreas": [
+        {
+          "name": "奥苏区",
+          "note": "餐馆夜生活集中,最方便"
+        },
+        {
+          "name": "机场区",
+          "note": "安静,中转合适"
+        }
+      ],
+      "transportTips": [
+        "网约车(Uber/Bolt)",
+        "小巴 trotro",
+        "出租车"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "英语官方语言,沟通顺畅"
+        },
+        {
+          "category": "PAYMENT",
+          "text": "现金为主,移动支付 MoMo 普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["独立广场", "纪念园", "市场"]
+        },
+        {
+          "day": 2,
+          "stops": ["海岸角城堡", "拉巴迪海滩"]
+        }
+      ]
+    },
+    {
+      "id": "addis_ababa",
+      "localName": "亚的斯亚贝巴",
+      "countryLocal": "埃塞俄比亚",
+      "description": "海拔 2400 米的\"新花\",人类祖母露西的家,咖啡仪式每天上演。",
+      "attractions": [
+        "埃塞俄比亚国家博物馆(露西化石)",
+        "圣三一大教堂",
+        "恩托托山观景台",
+        "梅尔卡托市场"
+      ],
+      "foods": [
+        "英吉拉配瓦特炖菜",
+        "咖啡仪式",
+        "生牛肉 Kitfo",
+        "蜂蜜酒 Tej"
+      ],
+      "stayAreas": [
+        {
+          "name": "博莱区",
+          "note": "机场方向,餐厅多"
+        },
+        {
+          "name": "皮亚萨老区",
+          "note": "市中心,老城氛围"
+        }
+      ],
+      "transportTips": [
+        "轻轨",
+        "出租车",
+        "蓝白小巴"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "海拔 2400 米,初到避免剧烈运动"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["国家博物馆", "圣三一大教堂"]
+        },
+        {
+          "day": 2,
+          "stops": ["恩托托山", "梅尔卡托市场", "咖啡仪式"]
+        }
+      ]
+    },
+    {
+      "id": "kigali",
+      "localName": "基加利",
+      "countryLocal": "卢旺达",
+      "description": "非洲最干净的首都,千丘之国的重生之城,山地大猩猩的大本营。",
+      "attractions": [
+        "基加利大屠杀纪念馆",
+        "尼亚米兰博老区",
+        "伊内玛艺术中心",
+        "火山国家公园(山地大猩猩)"
+      ],
+      "foods": [
+        "烤香蕉",
+        "乌伽丽配炖菜",
+        "卢旺达咖啡",
+        "烤肉串 Brochettes"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "方便,餐饮集中"
+        },
+        {
+          "name": "基约武区",
+          "note": "山坡安静,视野好"
+        }
+      ],
+      "transportTips": [
+        "摩托车出租 moto",
+        "出租车",
+        "公交"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "治安极好,全国禁塑,别带塑料袋入境"
+        },
+        {
+          "category": "VISA",
+          "text": "落地签/电子签便利;看大猩猩需提前订 permit"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["大屠杀纪念馆", "尼亚米兰博", "艺术中心"]
+        },
+        {
+          "day": 2,
+          "stops": ["火山国家公园", "大猩猩徒步"]
+        }
+      ]
+    },
+    {
+      "id": "windhoek",
+      "localName": "温得和克",
+      "countryLocal": "纳米比亚",
+      "description": "纳米比亚 Safari 的门户,德式老教堂与非洲高原阳光混合的安静首都。",
+      "attractions": [
+        "基督教堂(地标)",
+        "独立纪念博物馆",
+        "老堡垒",
+        "达安维伦动物保护区"
+      ],
+      "foods": [
+        "烤肉 Braai",
+        "野味排(羚羊)",
+        "德式香肠啤酒",
+        "Potjie 炖锅"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "步行可达主要景点"
+        }
+      ],
+      "transportTips": [
+        "出租车",
+        "自驾(Safari 主流方式)"
+      ],
+      "travelTips": [
+        {
+          "category": "TRANSPORT",
+          "text": "国内景点分散,建议自驾或跟团;靠左行驶"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["基督教堂", "博物馆", "市区"]
+        },
+        {
+          "day": 2,
+          "stops": ["出发去苏丝斯黎沙漠/埃托沙"]
+        }
+      ]
+    },
+    {
+      "id": "victoria_falls",
+      "localName": "维多利亚瀑布城",
+      "countryLocal": "津巴布韦",
+      "description": "世界三大瀑布之一,\"雷鸣之烟\"在雨季铺天盖地,彩虹常年悬挂。",
+      "attractions": [
+        "维多利亚瀑布国家公园",
+        "魔鬼泳池(赞比亚侧,旱季)",
+        "赞比西河日落游船",
+        "维多利亚瀑布大桥(蹦极)"
+      ],
+      "foods": [
+        "赞比西河烤鱼",
+        "Sadza 玉米糊配炖肉",
+        "烤肉",
+        "莫帕尼虫(勇敢者)"
+      ],
+      "stayAreas": [
+        {
+          "name": "瀑布城小镇",
+          "note": "步行到公园入口"
+        },
+        {
+          "name": "河畔 Lodge",
+          "note": "安静,看河景"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "出租车",
+        "酒店接送"
+      ],
+      "travelTips": [
+        {
+          "category": "VISA",
+          "text": "津赞两边看瀑布,KAZA 联合签证方便"
+        },
+        {
+          "category": "SAFETY",
+          "text": "瀑布区水雾大,相机手机备防水袋"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["瀑布国家公园", "日落游船"]
+        },
+        {
+          "day": 2,
+          "stops": ["大桥活动", "魔鬼泳池"]
+        }
+      ]
+    },
+    {
+      "id": "port_louis",
+      "localName": "路易港",
+      "countryLocal": "毛里求斯",
+      "description": "印度洋的多元文化十字路口,中央市场的香料味混着海风。",
+      "attractions": [
+        "中央市场",
+        "蔻丹广场海滨",
+        "堡垒山观景台",
+        "阿普拉瓦西加特(世遗)"
+      ],
+      "foods": [
+        "咖喱角 Samoussa",
+        "毛里求斯炒面",
+        "辣豆饼 Dholl Puri",
+        "甘蔗汁"
+      ],
+      "stayAreas": [
+        {
+          "name": "路易港市区",
+          "note": "商务方便"
+        },
+        {
+          "name": "海滩度假区",
+          "note": "多数人选海滩,当日往返市区"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "出租车",
+        "轻轨 Metro Express"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "英语/法语/克里奥尔语通行"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["中央市场", "蔻丹广场", "堡垒山"]
+        }
+      ]
+    },
+    {
+      "id": "victoria",
+      "localName": "维多利亚",
+      "countryLocal": "塞舌尔",
+      "description": "世界最小首都之一,出门就是花岗岩巨岩与绿松石海水。",
+      "attractions": [
+        "小笨钟(地标)",
+        "塞舌尔国家植物园",
+        "博瓦隆海滩",
+        "摩恩塞舌尔山国家公园"
+      ],
+      "foods": [
+        "烤鱼配米饭",
+        "章鱼咖喱",
+        "面包果",
+        "Takamaka 朗姆酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "博瓦隆海滩",
+          "note": "最方便,餐厅多"
+        },
+        {
+          "name": "维多利亚市区",
+          "note": "便宜,近市集"
+        }
+      ],
+      "transportTips": [
+        "公交(便宜)",
+        "出租车",
+        "租车"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "塞舌尔卢比,欧元/美元也通用"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["小笨钟", "植物园", "市区市集"]
+        },
+        {
+          "day": 2,
+          "stops": ["环岛", "博瓦隆海滩"]
+        }
+      ]
+    },
+    {
+      "id": "bogota",
+      "localName": "波哥大",
+      "countryLocal": "哥伦比亚",
+      "description": "海拔 2600 米的安第斯首都,黄金博物馆讲述穆伊斯卡人的黄金国传说。",
+      "attractions": [
+        "黄金博物馆",
+        "蒙塞拉特山(缆车俯瞰)",
+        "坎德拉里亚老区",
+        "博特罗博物馆"
+      ],
+      "foods": [
+        "阿希亚科鸡汤 Ajiaco",
+        "玉米饼 Arepa",
+        "热巧克力配奶酪",
+        "炸饺 Empanada"
+      ],
+      "stayAreas": [
+        {
+          "name": "坎德拉里亚",
+          "note": "老城氛围,背包客多"
+        },
+        {
+          "name": "93 公园区",
+          "note": "安全,夜生活餐厅多"
+        }
+      ],
+      "transportTips": [
+        "TransMilenio 快速公交",
+        "网约车",
+        "缆车(上山)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "海拔 2600 米初到缓行;老区夜晚注意财物"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["坎德拉里亚", "黄金博物馆", "博特罗博物馆"]
+        },
+        {
+          "day": 2,
+          "stops": ["蒙塞拉特山", "93 公园区"]
+        }
+      ]
+    },
+    {
+      "id": "quito",
+      "localName": "基多",
+      "countryLocal": "厄瓜多尔",
+      "description": "赤道上的世遗老城,教堂金顶下是安第斯最完整的殖民街区。",
+      "attractions": [
+        "基多老城(世遗)",
+        "耶稣会教堂(黄金教堂)",
+        "赤道纪念碑",
+        "面包山女神像",
+        "皮钦查火山缆车"
+      ],
+      "foods": [
+        "土豆奶酪汤 Locro",
+        "烤豚鼠 Cuy",
+        "炸饺 Empanada",
+        "鲜榨果汁"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "氛围浓,景点步行"
+        },
+        {
+          "name": "马拉尼斯新区",
+          "note": "安全现代,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交/无轨电车",
+        "出租车",
+        "缆车"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "海拔 2850 米,注意高反,多喝水"
+        },
+        {
+          "category": "CURRENCY",
+          "text": "通用美元,备小面额零钱"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "耶稣会教堂", "面包山"]
+        },
+        {
+          "day": 2,
+          "stops": ["赤道纪念碑", "火山缆车"]
+        }
+      ]
+    },
+    {
+      "id": "la_paz",
+      "localName": "拉巴斯",
+      "countryLocal": "玻利维亚",
+      "description": "世界海拔最高的首都,缆车当地铁坐,女巫市场里羊驼干尸高挂。",
+      "attractions": [
+        "缆车系统 Mi Teleférico",
+        "女巫市场",
+        "月亮谷",
+        "圣弗朗西斯科教堂",
+        "穆里略广场"
+      ],
+      "foods": [
+        "萨尔特尼亚肉饺",
+        "炖鸡饭 Sajta",
+        "藜麦汤",
+        "古柯茶"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "近女巫市场,热闹"
+        },
+        {
+          "name": "南区",
+          "note": "更安全现代,海拔略低"
+        }
+      ],
+      "transportTips": [
+        "缆车 Mi Teleférico",
+        "小巴",
+        "出租车"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "海拔 3600 米+,务必留适应期,喝古柯茶"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["缆车环线", "女巫市场", "穆里略广场"]
+        },
+        {
+          "day": 2,
+          "stops": ["月亮谷", "圣弗朗西斯科教堂"]
+        }
+      ]
+    },
+    {
+      "id": "montevideo",
+      "localName": "蒙得维的亚",
+      "countryLocal": "乌拉圭",
+      "description": "南美最松弛的首都,拉普拉塔河滨大道上人手一个马黛壶。",
+      "attractions": [
+        "老城区 Ciudad Vieja",
+        "拉米bla河滨大道 Rambla",
+        "港口市场",
+        "独立广场与萨尔沃宫",
+        "波西托斯海滩"
+      ],
+      "foods": [
+        "烤肉 Asado",
+        "乌拉圭三明治 Chivito",
+        "马黛茶",
+        "牛奶酱甜品"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "氛围浓,近港口市场"
+        },
+        {
+          "name": "波西托斯",
+          "note": "海滨,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "出租车",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "乌拉圭比索,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "港口市场", "独立广场"]
+        },
+        {
+          "day": 2,
+          "stops": ["河滨大道", "波西托斯海滩"]
+        }
+      ]
+    },
+    {
+      "id": "sao_paulo",
+      "localName": "圣保罗",
+      "countryLocal": "巴西",
+      "description": "南半球最大都市,米其林与街头涂鸦并存,巴西的美食首都。",
+      "attractions": [
+        "保利斯塔大道",
+        "圣保罗艺术博物馆 MASP",
+        "伊比拉普埃拉公园",
+        "蝙蝠侠巷涂鸦",
+        "市立市场 Mercadão"
+      ],
+      "foods": [
+        "市场 mortadella 三明治",
+        "巴西烤肉 Churrasco",
+        "芝士面包",
+        "瓜拉纳汽水"
+      ],
+      "stayAreas": [
+        {
+          "name": "保利斯塔大道沿线",
+          "note": "方便安全,地铁直达"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "网约车",
+        "公交"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "大城市通病:手机勿外露,夜间避免偏僻街区"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["保利斯塔大道", "MASP", "伊比拉普埃拉公园"]
+        },
+        {
+          "day": 2,
+          "stops": ["市立市场", "蝙蝠侠巷"]
+        }
+      ]
+    },
+    {
+      "id": "valparaiso",
+      "localName": "瓦尔帕莱索",
+      "countryLocal": "智利",
+      "description": "太平洋边的彩色山城,百年缆车爬满涂鸦山坡,聂鲁达的故居在这里。",
+      "attractions": [
+        "塞罗阿莱格雷彩色街区",
+        "百年缆车 Ascensores",
+        "聂鲁达故居 La Sebastiana",
+        "索托马约尔广场",
+        "港口区"
+      ],
+      "foods": [
+        "海鳗汤 Caldillo de Congrio",
+        "智利肉馅饼 Empanada",
+        "薯条牛排 Chorrillana",
+        "皮斯科酸酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "山城民宿",
+          "note": "景观好,坡陡"
+        },
+        {
+          "name": "维尼亚德尔马(邻城)",
+          "note": "海滩度假,更平缓"
+        }
+      ],
+      "transportTips": [
+        "缆车",
+        "公交",
+        "步行(爬坡多)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "坡道多穿防滑鞋;财物贴身"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["彩色山城", "聂鲁达故居", "港口"]
+        }
+      ]
+    },
+    {
+      "id": "ushuaia",
+      "localName": "乌斯怀亚",
+      "countryLocal": "阿根廷",
+      "description": "世界最南端的城市,去南极前的最后一站,灯塔守望着比格尔海峡。",
+      "attractions": [
+        "比格尔海峡游船(灯塔/海狮)",
+        "火地岛国家公园",
+        "世界尽头小火车",
+        "马舍尔冰川"
+      ],
+      "foods": [
+        "巴塔哥尼亚帝王蟹",
+        "烤羊肉",
+        "黑鳕鱼",
+        "热巧克力"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "近港口,出海集合方便"
+        }
+      ],
+      "transportTips": [
+        "出租车",
+        "旅行社接送",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "天气多变,夏季也备冲锋衣"
+        },
+        {
+          "category": "PAYMENT",
+          "text": "物价高,刷卡与现金汇率差异留意"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["比格尔海峡游船", "市区"]
+        },
+        {
+          "day": 2,
+          "stops": ["火地岛公园", "世界尽头小火车"]
+        }
+      ]
+    },
+    {
+      "id": "salta",
+      "localName": "萨尔塔",
+      "countryLocal": "阿根廷",
+      "description": "阿根廷西北的殖民明珠,\"漂亮城\"外是七彩山与高原葡萄酒乡。",
+      "attractions": [
+        "萨尔塔大教堂(粉红外观)",
+        "七月九日广场",
+        "圣贝尔纳多山缆车",
+        "高海拔考古博物馆",
+        "卡法亚特酒庄(一日)"
+      ],
+      "foods": [
+        "玉米粽 Humita",
+        "塔马利 Tamal",
+        "羊肉炖锅 Locro",
+        "托龙特斯白葡萄酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "广场周边",
+          "note": "步行方便,餐厅集中"
+        }
+      ],
+      "transportTips": [
+        "出租车",
+        "公交",
+        "一日团/租车(去七彩山)"
+      ],
+      "travelTips": [
+        {
+          "category": "TRANSPORT",
+          "text": "周边景点距离远,建议一日团或租车"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["七月九日广场", "大教堂", "缆车"]
+        },
+        {
+          "day": 2,
+          "stops": ["卡法亚特", "七彩山"]
+        }
+      ]
+    },
+    {
+      "id": "wellington",
+      "localName": "惠灵顿",
+      "countryLocal": "新西兰",
+      "description": "风之首都,《指环王》的维塔工作室与城市生态保护区同城。",
+      "attractions": [
+        "蒂帕帕国家博物馆 Te Papa",
+        "惠灵顿缆车+植物园",
+        "维塔工作室 Wētā Cave",
+        "西兰蒂亚生态保护区",
+        "古巴街"
+      ],
+      "foods": [
+        "Flat White 咖啡",
+        "新西兰肉派",
+        "海鲜",
+        "精酿啤酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心/古巴街",
+          "note": "步行方便,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "缆车",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "常年风大,带防风外套"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["Te Papa", "缆车+植物园", "古巴街"]
+        },
+        {
+          "day": 2,
+          "stops": ["维塔工作室", "西兰蒂亚"]
+        }
+      ]
+    },
+    {
+      "id": "christchurch",
+      "localName": "基督城",
+      "countryLocal": "新西兰",
+      "description": "南岛门户花园城市,雅芳河撑篙与震后重生的纸板大教堂。",
+      "attractions": [
+        "雅芳河撑篙",
+        "基督城植物园",
+        "纸板大教堂",
+        "河畔市场",
+        "国际南极中心"
+      ],
+      "foods": [
+        "新西兰羊排",
+        "银鱼饼 Whitebait",
+        "肉派",
+        "咖啡"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "方便,近植物园"
+        }
+      ],
+      "transportTips": [
+        "复古电车",
+        "公交",
+        "租车(南岛环线)"
+      ],
+      "travelTips": [
+        {
+          "category": "TRANSPORT",
+          "text": "南岛环线起点,建议在此租车"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["雅芳河", "植物园", "纸板大教堂", "河畔市场"]
+        }
+      ]
+    },
+    {
+      "id": "perth",
+      "localName": "珀斯",
+      "countryLocal": "澳大利亚",
+      "description": "世界最孤独的大城市,黑天鹅河穿城,印度洋日落每天免费上演。",
+      "attractions": [
+        "国王公园(俯瞰市区)",
+        "弗里曼特尔港城",
+        "科特斯洛海滩",
+        "罗特尼斯岛(短尾矮袋鼠)"
+      ],
+      "foods": [
+        "澳式早午餐",
+        "海鲜",
+        "肉派",
+        "Flat White"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "交通方便"
+        },
+        {
+          "name": "弗里曼特尔",
+          "note": "港城氛围,周末市集"
+        }
+      ],
+      "transportTips": [
+        "火车/公交(市中心 CAT 免费)",
+        "渡轮(去罗特尼斯岛)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "日照极强,全年防晒"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["国王公园", "市区", "科特斯洛海滩"]
+        },
+        {
+          "day": 2,
+          "stops": ["罗特尼斯岛", "弗里曼特尔"]
+        }
+      ]
+    },
+    {
+      "id": "adelaide",
+      "localName": "阿德莱德",
+      "countryLocal": "澳大利亚",
+      "description": "\"二十分钟城市\",市区出发一天喝到巴罗萨西拉,看到克莱兰的考拉。",
+      "attractions": [
+        "阿德莱德中央市场",
+        "北大街文化区",
+        "格雷尔海滩",
+        "巴罗萨谷酒庄(一日)",
+        "克莱兰野生动物园"
+      ],
+      "foods": [
+        "中央市场小吃",
+        "巴罗萨西拉",
+        "澳式早午餐",
+        "冰咖啡"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "电车免费段内,方便"
+        }
+      ],
+      "transportTips": [
+        "电车(市区免费段)",
+        "公交",
+        "一日团/自驾(酒庄)"
+      ],
+      "travelTips": [
+        {
+          "category": "TRANSPORT",
+          "text": "酒庄区无公共交通,建议一日团或自驾"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["中央市场", "北大街", "格雷尔海滩"]
+        },
+        {
+          "day": 2,
+          "stops": ["巴罗萨谷", "酒庄品鉴"]
+        }
+      ]
+    },
+    {
+      "id": "cairns",
+      "localName": "凯恩斯",
+      "countryLocal": "澳大利亚",
+      "description": "大堡礁的门户,一天潜进珊瑚海,一天走进亿年热带雨林。",
+      "attractions": [
+        "大堡礁出海(浮潜/深潜)",
+        "库兰达雨林(缆车+观光火车)",
+        "滨海栈道潟湖",
+        "戴恩树雨林(一日)"
+      ],
+      "foods": [
+        "海鲜",
+        "澳洲肺鱼 Barramundi",
+        "热带水果",
+        "袋鼠/鳄鱼肉(尝鲜)"
+      ],
+      "stayAreas": [
+        {
+          "name": "滨海大道沿线",
+          "note": "出海集合方便"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "旅行社接送",
+        "公交"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "11-5 月水母季,下海穿防护服"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["滨海栈道", "潟湖"]
+        },
+        {
+          "day": 2,
+          "stops": ["大堡礁出海"]
+        },
+        {
+          "day": 3,
+          "stops": ["库兰达缆车", "观光火车"]
+        }
+      ]
+    },
+    {
+      "id": "hobart",
+      "localName": "霍巴特",
+      "countryLocal": "澳大利亚",
+      "description": "塔斯马尼亚的首府,MONA 怪咖美术馆与萨拉曼卡市集之间夹着南极来的风。",
+      "attractions": [
+        "MONA 古今艺术博物馆",
+        "萨拉曼卡广场(周六市集)",
+        "惠灵顿山(俯瞰)",
+        "百特立角老区",
+        "卡斯卡德啤酒厂"
+      ],
+      "foods": [
+        "塔州生蚝",
+        "三文鱼",
+        "扇贝派",
+        "单一麦芽威士忌"
+      ],
+      "stayAreas": [
+        {
+          "name": "码头区",
+          "note": "最方便,近萨拉曼卡"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "出租车",
+        "租车(环岛)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "冬季风大寒冷,备防风外套"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["MONA", "萨拉曼卡广场"]
+        },
+        {
+          "day": 2,
+          "stops": ["惠灵顿山", "百特立角"]
+        }
+      ]
+    },
+    {
+      "id": "papeete",
+      "localName": "帕皮提",
+      "countryLocal": "法属波利尼西亚",
+      "description": "南太平洋的珍珠门户,市集里的栀子花香比闹钟更早叫醒海岛。",
+      "attractions": [
+        "帕皮提市集(珍珠/香草)",
+        "海滨步道",
+        "罗伯特万珍珠博物馆",
+        "大溪地环岛(瀑布/黑沙滩)",
+        "茉莉雅岛(跳岛)"
+      ],
+      "foods": [
+        "生鱼拌椰奶 Poisson Cru",
+        "烤乳猪 Ahima'a",
+        "热带水果",
+        "法棍配椰子酱"
+      ],
+      "stayAreas": [
+        {
+          "name": "帕皮提市区",
+          "note": "转机跳岛方便"
+        },
+        {
+          "name": "西海岸度假村",
+          "note": "海滩,安静"
+        }
+      ],
+      "transportTips": [
+        "公交 Le Truck",
+        "出租车",
+        "租车环岛"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "太平洋法郎 XPF,刷卡通用"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["市集", "海滨步道", "珍珠博物馆"]
+        },
+        {
+          "day": 2,
+          "stops": ["环岛", "瀑布", "黑沙滩"]
+        }
+      ]
+    },
+    {
+      "id": "havana",
+      "localName": "哈瓦那",
+      "countryLocal": "古巴",
+      "description": "老爷车驶过马卡龙色的老城,莫吉托和萨尔萨把黄昏拉得很长。",
+      "attractions": [
+        "哈瓦那老城(世遗)",
+        "马雷贡海滨大道",
+        "革命广场",
+        "莫罗城堡(日落+礼炮)",
+        "老爷车巡游"
+      ],
+      "foods": [
+        "烤猪肉饭 Lechón Asado",
+        "古巴三明治",
+        "莫吉托",
+        "黑豆饭 Congri"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城民宿 Casa",
+          "note": "体验最佳,房东会给本地建议"
+        }
+      ],
+      "transportTips": [
+        "老爷车出租",
+        "出租车",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "带足现金(欧元/美元换 CUP),刷卡受限"
+        },
+        {
+          "category": "LANGUAGE",
+          "text": "西班牙语为主,学几句问候很有用"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城四大广场", "马雷贡日落"]
+        },
+        {
+          "day": 2,
+          "stops": ["革命广场", "莫罗城堡礼炮"]
+        },
+        {
+          "day": 3,
+          "stops": ["老爷车巡游", "雪茄厂"]
+        }
+      ]
+    },
+    {
+      "id": "cancun",
+      "localName": "坎昆",
+      "countryLocal": "墨西哥",
+      "description": "加勒比蓝得不像话,上午浮潜,下午去看玛雅金字塔。",
+      "attractions": [
+        "酒店区海滩",
+        "奇琴伊察(一日)",
+        "女人岛 Isla Mujeres",
+        "图卢姆遗址(一日)",
+        "天坑浮潜 Cenote"
+      ],
+      "foods": [
+        "墨西哥卷饼 Taco",
+        "烤猪肉 Cochinita Pibil",
+        "海鲜",
+        "玛格丽特"
+      ],
+      "stayAreas": [
+        {
+          "name": "酒店区",
+          "note": "海景度假村集中"
+        },
+        {
+          "name": "市中心",
+          "note": "便宜本地,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交 R1/R2",
+        "出租车",
+        "ADO 大巴(去金字塔)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "出租车先议价或用官方站点;天坑跟正规团"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["酒店区海滩", "出海浮潜"]
+        },
+        {
+          "day": 2,
+          "stops": ["奇琴伊察", "天坑"]
+        },
+        {
+          "day": 3,
+          "stops": ["女人岛", "图卢姆"]
+        }
+      ]
+    },
+    {
+      "id": "san_jose",
+      "localName": "圣何塞",
+      "countryLocal": "哥斯达黎加",
+      "description": "中美洲最环保国家的枢纽,进城看金器,出城就是火山与云雾林。",
+      "attractions": [
+        "黄金博物馆",
+        "国家剧院",
+        "中央市场",
+        "波阿斯火山(一日)",
+        "拉巴斯瀑布花园(一日)"
+      ],
+      "foods": [
+        "国菜盖伊饭 Gallo Pinto",
+        "炸芭蕉 Patacones",
+        "哥斯达黎加咖啡",
+        "热带果汁"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "方便,近博物馆"
+        },
+        {
+          "name": "埃斯卡苏区",
+          "note": "安静安全,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "网约车",
+        "一日团(火山雨林)"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "西班牙语为主,旅游区英语可行"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["黄金博物馆", "国家剧院", "中央市场"]
+        },
+        {
+          "day": 2,
+          "stops": ["波阿斯火山", "拉巴斯瀑布"]
+        }
+      ]
+    },
+    {
+      "id": "panama_city",
+      "localName": "巴拿马城",
+      "countryLocal": "巴拿马",
+      "description": "两洋之间的天桥,摩天大楼天际线旁就是百年运河的船闸。",
+      "attractions": [
+        "巴拿马运河(米拉弗洛雷斯船闸)",
+        "老城区 Casco Viejo",
+        "阿马多尔海堤",
+        "都市自然公园(看树懒)",
+        "天际线观景台"
+      ],
+      "foods": [
+        "酸橘汁腌鱼 Ceviche",
+        "桑科乔鸡汤 Sancocho",
+        "炸鱼配芭蕉",
+        "瑰夏咖啡"
+      ],
+      "stayAreas": [
+        {
+          "name": "Casco Viejo 老城",
+          "note": "氛围浓,夜生活多"
+        },
+        {
+          "name": "金融区",
+          "note": "现代安全,地铁方便"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "网约车",
+        "出租车"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "通用美元,本地币巴波亚等值流通"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["运河船闸", "Casco Viejo"]
+        },
+        {
+          "day": 2,
+          "stops": ["阿马多尔海堤", "都市自然公园"]
+        }
+      ]
+    },
+    {
+      "id": "antigua",
+      "localName": "安提瓜",
+      "countryLocal": "危地马拉",
+      "description": "火山环抱的世遗小城,鹅卵石路上每一步都是巴洛克废墟与咖啡香。",
+      "attractions": [
+        "圣卡塔利娜拱门(地标)",
+        "中央广场",
+        "拉梅赛德教堂",
+        "十字架山(俯瞰)",
+        "帕卡亚火山徒步(看熔岩)"
+      ],
+      "foods": [
+        "危地马拉炖鸡 Pepián",
+        "玉米粽 Tamal",
+        "安提瓜咖啡",
+        "炸芭蕉"
+      ],
+      "stayAreas": [
+        {
+          "name": "古城内民宿",
+          "note": "步行全城,氛围最佳"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "嘟嘟车",
+        "一日团(火山)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "古城内治安好;火山徒步务必跟团"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["拱门", "中央广场", "十字架山"]
+        },
+        {
+          "day": 2,
+          "stops": ["帕卡亚火山", "咖啡馆"]
+        }
+      ]
+    },
+    {
+      "id": "washington_dc",
+      "localName": "华盛顿",
+      "countryLocal": "美国",
+      "description": "博物馆全部免费的首都,国家广场从国会山一路走到林肯纪念堂。",
+      "attractions": [
+        "国家广场(国会/纪念碑)",
+        "史密森尼博物馆群",
+        "白宫(外观)",
+        "乔治城老区",
+        "潮汐湖(樱花季)"
+      ],
+      "foods": [
+        "半熏肠热狗 Half-Smoke",
+        "蓝蟹",
+        "使馆区各国美食",
+        "精酿啤酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心/国家广场",
+          "note": "地铁方便,景点步行"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "公交",
+        "共享单车"
+      ],
+      "travelTips": [
+        {
+          "category": "PAYMENT",
+          "text": "史密森尼免费,热门馆需预约时段"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["国会山", "国家广场", "林肯纪念堂"]
+        },
+        {
+          "day": 2,
+          "stops": ["史密森尼博物馆", "白宫", "乔治城"]
+        }
+      ]
+    },
+    {
+      "id": "ulaanbaatar",
+      "localName": "乌兰巴托",
+      "countryLocal": "蒙古",
+      "description": "草原之国的首都,进城逛佛寺,出城一小时就是无边草原与蒙古包。",
+      "attractions": [
+        "甘丹寺",
+        "苏赫巴托广场",
+        "成吉思汗雕像群(一日)",
+        "特日勒吉国家公园(一日)",
+        "国家历史博物馆"
+      ],
+      "foods": [
+        "蒙古包子 Buuz",
+        "石头烤肉 Khorkhog",
+        "奶茶",
+        "马奶酒 Airag"
+      ],
+      "stayAreas": [
+        {
+          "name": "广场周边",
+          "note": "方便,餐饮集中"
+        }
+      ],
+      "transportTips": [
+        "出租车(随手招)",
+        "公交",
+        "一日团(草原)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "冬季极寒可达 -30°C,6-9 月最佳"
+        },
+        {
+          "category": "PAYMENT",
+          "text": "现金图格里克为主"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["苏赫巴托广场", "甘丹寺", "博物馆"]
+        },
+        {
+          "day": 2,
+          "stops": ["成吉思汗雕像", "特日勒吉草原"]
+        }
+      ]
+    },
+    {
+      "id": "samarkand",
+      "localName": "撒马尔罕",
+      "countryLocal": "乌兹别克斯坦",
+      "description": "丝绸之路的心脏,雷吉斯坦广场的蓝色穹顶美到失语。",
+      "attractions": [
+        "雷吉斯坦广场",
+        "古尔埃米尔陵(帖木儿墓)",
+        "比比哈努姆清真寺",
+        "夏伊辛达陵园",
+        "西亚布巴扎"
+      ],
+      "foods": [
+        "乌兹别克抓饭 Plov",
+        "烤包子 Samsa",
+        "拉条子 Lagman",
+        "甜瓜"
+      ],
+      "stayAreas": [
+        {
+          "name": "雷吉斯坦周边",
+          "note": "步行核心区,民宿多"
+        }
+      ],
+      "transportTips": [
+        "出租车(便宜)",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "索姆现金为主,备好零钱"
+        },
+        {
+          "category": "VISA",
+          "text": "中国护照免签 10 天"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["雷吉斯坦", "西亚布巴扎", "比比哈努姆"]
+        },
+        {
+          "day": 2,
+          "stops": ["古尔埃米尔陵", "夏伊辛达"]
+        }
+      ]
+    },
+    {
+      "id": "almaty",
+      "localName": "阿拉木图",
+      "countryLocal": "哈萨克斯坦",
+      "description": "雪山脚下的苹果之城,上午滑冰上麦迪奥,下午缆车进天山。",
+      "attractions": [
+        "麦迪奥高山滑冰场",
+        "琼布拉克滑雪场(缆车)",
+        "绿色巴扎",
+        "潘菲洛夫公园(升天大教堂)",
+        "大阿拉木图湖(一日)"
+      ],
+      "foods": [
+        "别什巴尔马克(马肉面)",
+        "哈萨克抓饭",
+        "马肠子 Kazy",
+        "奶茶"
+      ],
+      "stayAreas": [
+        {
+          "name": "市中心",
+          "note": "方便,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "出租车(Yandex)",
+        "公交"
+      ],
+      "travelTips": [
+        {
+          "category": "LANGUAGE",
+          "text": "俄语/哈萨克语为主,英语有限"
+        },
+        {
+          "category": "CURRENCY",
+          "text": "坚戈,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["绿色巴扎", "潘菲洛夫公园", "市区"]
+        },
+        {
+          "day": 2,
+          "stops": ["麦迪奥", "琼布拉克"]
+        }
+      ]
+    },
+    {
+      "id": "baku",
+      "localName": "巴库",
+      "countryLocal": "阿塞拜疆",
+      "description": "里海边的火焰之城,中世纪老城巷口一转弯就是扎哈的未来主义曲线。",
+      "attractions": [
+        "巴库老城(少女塔/希尔万沙宫)",
+        "火焰塔(夜景)",
+        "阿利耶夫文化中心(扎哈)",
+        "巴库大道海滨",
+        "泥火山/火焰山(一日)"
+      ],
+      "foods": [
+        "阿塞拜疆抓饭 Plov",
+        "烤肉 Kebab",
+        "多尔玛 Dolma",
+        "红茶配果酱"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城周边",
+          "note": "景点步行,夜景好"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "出租车(Bolt)",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "VISA",
+          "text": "电子签便利,3 个工作日出签"
+        },
+        {
+          "category": "CURRENCY",
+          "text": "马纳特,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "海滨大道", "火焰塔夜景"]
+        },
+        {
+          "day": 2,
+          "stops": ["文化中心", "泥火山/火焰山"]
+        }
+      ]
+    },
+    {
+      "id": "yerevan",
+      "localName": "埃里温",
+      "countryLocal": "亚美尼亚",
+      "description": "粉红凝灰岩之城,大阶梯顶端能望见诺亚方舟停靠的亚拉腊山。",
+      "attractions": [
+        "埃里温大阶梯 Cascade",
+        "共和国广场(夜景喷泉)",
+        "亚美尼亚种族灭绝纪念馆",
+        "维尔尼萨吉周末市集",
+        "格加尔德修道院+加尼神庙(一日)"
+      ],
+      "foods": [
+        "亚美尼亚烤肉 Khorovats",
+        "拉瓦什薄饼",
+        "杏子(国果)",
+        "亚美尼亚白兰地"
+      ],
+      "stayAreas": [
+        {
+          "name": "共和国广场周边",
+          "note": "核心区,步行方便"
+        }
+      ],
+      "transportTips": [
+        "地铁",
+        "出租车(便宜)",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "VISA",
+          "text": "中国护照免签"
+        },
+        {
+          "category": "CURRENCY",
+          "text": "德拉姆现金为主"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["共和国广场", "大阶梯", "市集"]
+        },
+        {
+          "day": 2,
+          "stops": ["格加尔德修道院", "加尼神庙"]
+        }
+      ]
+    },
+    {
+      "id": "muscat",
+      "localName": "马斯喀特",
+      "countryLocal": "阿曼",
+      "description": "海湾最克制的首都,白色建筑群落在山海之间,大清真寺的地毯世界第二。",
+      "attractions": [
+        "苏丹卡布斯大清真寺",
+        "穆特拉集市+海滨长廊",
+        "皇家歌剧院",
+        "老马斯喀特(双堡)",
+        "瓦迪沙布绿洲峡谷(一日)"
+      ],
+      "foods": [
+        "阿曼炖肉 Shuwa",
+        "椰枣",
+        "阿拉伯咖啡 Kahwa",
+        "海鲜"
+      ],
+      "stayAreas": [
+        {
+          "name": "穆特拉区",
+          "note": "近集市与海滨"
+        },
+        {
+          "name": "古鲁姆区",
+          "note": "海滩,酒店多"
+        }
+      ],
+      "transportTips": [
+        "出租车",
+        "租车(去峡谷)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "治安极好;清真寺参观注意着装(长袖长裤)"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["大清真寺", "穆特拉集市", "海滨长廊"]
+        },
+        {
+          "day": 2,
+          "stops": ["老马斯喀特", "瓦迪沙布"]
+        }
+      ]
+    },
+    {
+      "id": "amman",
+      "localName": "安曼",
+      "countryLocal": "约旦",
+      "description": "七丘之上的白色首都,去佩特拉与死海前最舒服的落脚点。",
+      "attractions": [
+        "城堡山(俯瞰老城)",
+        "罗马剧场",
+        "彩虹街",
+        "佩特拉(一日/必去)",
+        "死海(一日漂浮)"
+      ],
+      "foods": [
+        "国菜曼萨夫 Mansaf",
+        "鹰嘴豆泥 Hummus",
+        "法拉费 Falafel",
+        "库纳法 Kunafa"
+      ],
+      "stayAreas": [
+        {
+          "name": "彩虹街/市中心",
+          "note": "氛围方便,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "出租车(便宜)",
+        "网约车",
+        "JETT 大巴(去佩特拉)"
+      ],
+      "travelTips": [
+        {
+          "category": "VISA",
+          "text": "Jordan Pass 含签证费+佩特拉门票,很划算"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["城堡山", "罗马剧场", "彩虹街"]
+        },
+        {
+          "day": 2,
+          "stops": ["佩特拉", "死海"]
+        }
+      ]
+    },
+    {
+      "id": "paro",
+      "localName": "帕罗",
+      "countryLocal": "不丹",
+      "description": "虎穴寺悬在 900 米峭壁上,这里是不丹幸福哲学的封面。",
+      "attractions": [
+        "虎穴寺(徒步 2-3 小时)",
+        "帕罗宗",
+        "不丹国家博物馆",
+        "祈楚寺",
+        "帕罗河谷田园"
+      ],
+      "foods": [
+        "辣椒炖菜 Ema Datshi",
+        "红米饭",
+        "藏式饺子 Momo",
+        "酥油茶"
+      ],
+      "stayAreas": [
+        {
+          "name": "帕罗镇",
+          "note": "近各景点,旅行社安排"
+        }
+      ],
+      "transportTips": [
+        "包车(旅行社标配)",
+        "徒步"
+      ],
+      "travelTips": [
+        {
+          "category": "VISA",
+          "text": "须通过旅行社办签证+SDF 可持续费,行程需导游陪同"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["帕罗宗", "国家博物馆", "镇区"]
+        },
+        {
+          "day": 2,
+          "stops": ["虎穴寺徒步", "祈楚寺"]
+        }
+      ]
+    },
+    {
+      "id": "tallinn",
+      "localName": "塔林",
+      "countryLocal": "爱沙尼亚",
+      "description": "北欧保存最完整的中世纪老城,红顶塔楼像从童话里直接搬出来。",
+      "attractions": [
+        "塔林老城(世遗)",
+        "托姆佩亚山观景台",
+        "亚历山大涅夫斯基大教堂",
+        "圣奥拉夫教堂塔顶",
+        "卡德里奥宫"
+      ],
+      "foods": [
+        "黑麦面包",
+        "烤猪肘",
+        "热红酒 Glögi(冬季)",
+        "Kalev 杏仁糖"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "氛围最佳,景点步行"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "电车",
+        "公交"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "欧元,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "观景台", "大教堂"]
+        },
+        {
+          "day": 2,
+          "stops": ["卡德里奥宫", "渡轮去赫尔辛基"]
+        }
+      ]
+    },
+    {
+      "id": "riga",
+      "localName": "里加",
+      "countryLocal": "拉脱维亚",
+      "description": "新艺术建筑之都,每三栋楼就有一栋是世界遗产级的立面。",
+      "attractions": [
+        "里加老城(世遗)",
+        "新艺术建筑群(阿尔伯特街)",
+        "里加中央市场(飞艇机库)",
+        "自由纪念碑",
+        "圣彼得教堂塔顶"
+      ],
+      "foods": [
+        "灰豌豆配培根(国菜)",
+        "黑面包",
+        "里加香脂 Black Balsam",
+        "烟熏鱼"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城/中心区",
+          "note": "步行方便"
+        }
+      ],
+      "transportTips": [
+        "电车",
+        "公交",
+        "步行"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "欧元,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "自由纪念碑", "教堂塔顶"]
+        },
+        {
+          "day": 2,
+          "stops": ["阿尔伯特街", "中央市场"]
+        }
+      ]
+    },
+    {
+      "id": "vilnius",
+      "localName": "维尔纽斯",
+      "countryLocal": "立陶宛",
+      "description": "巴洛克老城对岸有个艺术家自治的\"共和国\",宪法写着\"狗有权做狗\"。",
+      "attractions": [
+        "维尔纽斯老城(世遗)",
+        "乌祖皮斯\"共和国\"",
+        "格迪米纳斯塔(俯瞰)",
+        "黎明之门",
+        "特拉凯城堡(一日)"
+      ],
+      "foods": [
+        "粉红甜菜根冷汤",
+        "土豆饺子 Cepelinai",
+        "黑麦面包",
+        "蜂蜜酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "核心区,步行方便"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "公交",
+        "火车(去特拉凯)"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "欧元,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["老城", "乌祖皮斯", "格迪米纳斯塔"]
+        },
+        {
+          "day": 2,
+          "stops": ["特拉凯城堡"]
+        }
+      ]
+    },
+    {
+      "id": "ljubljana",
+      "localName": "卢布尔雅那",
+      "countryLocal": "斯洛文尼亚",
+      "description": "龙桥守着翡翠色的河,全城步行一小时逛完,去布莱德湖只要四十分钟。",
+      "attractions": [
+        "卢布尔雅那城堡(缆车)",
+        "龙桥",
+        "三重桥+普列舍仁广场",
+        "中央市场",
+        "布莱德湖(一日)"
+      ],
+      "foods": [
+        "克拉尼斯卡香肠",
+        "荞麦卷 Štruklji",
+        "布莱德奶油蛋糕",
+        "斯洛文尼亚葡萄酒"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城河边",
+          "note": "最有氛围,餐厅多"
+        }
+      ],
+      "transportTips": [
+        "步行",
+        "公交",
+        "巴士(去布莱德)"
+      ],
+      "travelTips": [
+        {
+          "category": "CURRENCY",
+          "text": "欧元,刷卡普及"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["城堡", "龙桥", "三重桥", "市场"]
+        },
+        {
+          "day": 2,
+          "stops": ["布莱德湖"]
+        }
+      ]
+    },
+    {
+      "id": "salzburg",
+      "localName": "萨尔茨堡",
+      "countryLocal": "奥地利",
+      "description": "莫扎特的故乡,要塞俯瞰巴洛克老城,《音乐之声》的旋律遍布山坡。",
+      "attractions": [
+        "霍亨萨尔茨堡要塞",
+        "米拉贝尔宫花园(《音乐之声》)",
+        "莫扎特出生地(粮食胡同)",
+        "萨尔茨堡大教堂",
+        "海尔布伦戏水宫"
+      ],
+      "foods": [
+        "莫扎特巧克力球",
+        "萨赫蛋糕",
+        "奥地利炸猪排",
+        "苹果卷"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "氛围最佳"
+        },
+        {
+          "name": "火车站周边",
+          "note": "交通方便,性价比高"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "步行",
+        "缆车(上要塞)"
+      ],
+      "travelTips": [
+        {
+          "category": "PAYMENT",
+          "text": "Salzburg Card 含交通与门票,很划算"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["要塞", "大教堂", "粮食胡同"]
+        },
+        {
+          "day": 2,
+          "stops": ["米拉贝尔宫", "海尔布伦宫"]
+        }
+      ]
+    },
+    {
+      "id": "san_sebastian",
+      "localName": "圣塞巴斯蒂安",
+      "countryLocal": "西班牙",
+      "description": "人均米其林星星最多的城市之一,贝壳湾的弧线配 Pintxos 小酒馆巡游。",
+      "attractions": [
+        "贝壳湾海滩 La Concha",
+        "老城 Pintxos 酒吧街",
+        "乌尔古尔山(俯瞰)",
+        "伊格尔多山(缆车)",
+        "圣克拉拉岛(划船)"
+      ],
+      "foods": [
+        "Pintxos 巴斯克小食",
+        "巴斯克烤鳕鱼",
+        "烤牛排 Txuleta",
+        "巴斯克芝士蛋糕"
+      ],
+      "stayAreas": [
+        {
+          "name": "老城",
+          "note": "美食核心,热闹"
+        },
+        {
+          "name": "贝壳湾沿岸",
+          "note": "海景,安静"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "步行",
+        "缆车"
+      ],
+      "travelTips": [
+        {
+          "category": "PAYMENT",
+          "text": "美食预算留足;Pintxos 站着吃更地道"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["贝壳湾", "老城酒吧街"]
+        },
+        {
+          "day": 2,
+          "stops": ["乌尔古尔山", "伊格尔多山"]
+        }
+      ]
+    },
+    {
+      "id": "valletta",
+      "localName": "瓦莱塔",
+      "countryLocal": "马耳他",
+      "description": "骑士团建的海上要塞城,每条坡道尽头都是地中海的蓝。",
+      "attractions": [
+        "圣约翰大教堂(卡拉瓦乔真迹)",
+        "上巴拉卡花园(正午礼炮)",
+        "大团长宫",
+        "瓦莱塔海滨",
+        "姆迪纳古城/蓝洞(一日)"
+      ],
+      "foods": [
+        "兔肉炖菜 Fenkata",
+        "马耳他酥饼 Pastizzi",
+        "炖章鱼",
+        "Kinnie 汽水"
+      ],
+      "stayAreas": [
+        {
+          "name": "瓦莱塔城内",
+          "note": "氛围浓,坡多"
+        },
+        {
+          "name": "斯利马(渡轮对岸)",
+          "note": "热闹,海景餐厅多"
+        }
+      ],
+      "transportTips": [
+        "公交",
+        "渡轮",
+        "步行(坡多)"
+      ],
+      "travelTips": [
+        {
+          "category": "SAFETY",
+          "text": "坡道多穿好走的鞋;夏季极晒"
+        }
+      ],
+      "route": [
+        {
+          "day": 1,
+          "stops": ["圣约翰大教堂", "上巴拉卡花园", "海滨"]
+        },
+        {
+          "day": 2,
+          "stops": ["姆迪纳", "蓝洞"]
+        }
       ]
     }
   ]

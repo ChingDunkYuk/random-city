@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "cities": [
     {
       "id": "tokyo",
@@ -2952,6 +2952,1381 @@
       "imageKeywords": [
         "fiji",
         "beach"
+      ]
+    },
+    {
+      "id": "tunis",
+      "name": "Tunis",
+      "country": "Tunisia",
+      "countryCode": "TN",
+      "continent": "AFRICA",
+      "latitude": 36.8065,
+      "longitude": 10.1815,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "tunis",
+        "sidi bou said"
+      ]
+    },
+    {
+      "id": "casablanca",
+      "name": "Casablanca",
+      "country": "Morocco",
+      "countryCode": "MA",
+      "continent": "AFRICA",
+      "latitude": 33.5731,
+      "longitude": -7.5898,
+      "tags": [
+        "CITY",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "casablanca",
+        "hassan ii mosque"
+      ]
+    },
+    {
+      "id": "essaouira",
+      "name": "Essaouira",
+      "country": "Morocco",
+      "countryCode": "MA",
+      "continent": "AFRICA",
+      "latitude": 31.5085,
+      "longitude": -9.7595,
+      "tags": [
+        "BEACH",
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 2,
+      "imageKeywords": [
+        "essaouira",
+        "essaouira port"
+      ]
+    },
+    {
+      "id": "dakar",
+      "name": "Dakar",
+      "country": "Senegal",
+      "countryCode": "SN",
+      "continent": "AFRICA",
+      "latitude": 14.7167,
+      "longitude": -17.4677,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "HISTORY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "dakar",
+        "dakar senegal"
+      ]
+    },
+    {
+      "id": "accra",
+      "name": "Accra",
+      "country": "Ghana",
+      "countryCode": "GH",
+      "continent": "AFRICA",
+      "latitude": 5.6037,
+      "longitude": -0.187,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "accra",
+        "accra ghana"
+      ]
+    },
+    {
+      "id": "addis_ababa",
+      "name": "Addis Ababa",
+      "country": "Ethiopia",
+      "countryCode": "ET",
+      "continent": "AFRICA",
+      "latitude": 8.9806,
+      "longitude": 38.7578,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "addis ababa",
+        "addis ababa city"
+      ]
+    },
+    {
+      "id": "kigali",
+      "name": "Kigali",
+      "country": "Rwanda",
+      "countryCode": "RW",
+      "continent": "AFRICA",
+      "latitude": -1.9403,
+      "longitude": 29.8739,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        12,
+        1,
+        2
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "kigali",
+        "kigali rwanda"
+      ]
+    },
+    {
+      "id": "windhoek",
+      "name": "Windhoek",
+      "country": "Namibia",
+      "countryCode": "NA",
+      "continent": "AFRICA",
+      "latitude": -22.5609,
+      "longitude": 17.0658,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "windhoek",
+        "windhoek namibia"
+      ]
+    },
+    {
+      "id": "victoria_falls",
+      "name": "Victoria Falls",
+      "country": "Zimbabwe",
+      "countryCode": "ZW",
+      "continent": "AFRICA",
+      "latitude": -17.9243,
+      "longitude": 25.8572,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "victoria falls",
+        "victoria falls waterfall"
+      ]
+    },
+    {
+      "id": "port_louis",
+      "name": "Port Louis",
+      "country": "Mauritius",
+      "countryCode": "MU",
+      "continent": "AFRICA",
+      "latitude": -20.1609,
+      "longitude": 57.5012,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "port louis",
+        "port louis mauritius"
+      ]
+    },
+    {
+      "id": "victoria",
+      "name": "Victoria",
+      "country": "Seychelles",
+      "countryCode": "SC",
+      "continent": "AFRICA",
+      "latitude": -4.6191,
+      "longitude": 55.4513,
+      "tags": [
+        "BEACH",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "victoria seychelles",
+        "mahe seychelles"
+      ]
+    },
+    {
+      "id": "bogota",
+      "name": "Bogotá",
+      "country": "Colombia",
+      "countryCode": "CO",
+      "continent": "SOUTH_AMERICA",
+      "latitude": 4.711,
+      "longitude": -74.0721,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "bogota",
+        "bogota monserrate"
+      ]
+    },
+    {
+      "id": "quito",
+      "name": "Quito",
+      "country": "Ecuador",
+      "countryCode": "EC",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -0.1807,
+      "longitude": -78.4678,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "quito",
+        "quito old town"
+      ]
+    },
+    {
+      "id": "la_paz",
+      "name": "La Paz",
+      "country": "Bolivia",
+      "countryCode": "BO",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -16.4897,
+      "longitude": -68.1193,
+      "tags": [
+        "CITY",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "la paz bolivia",
+        "la paz teleferico"
+      ]
+    },
+    {
+      "id": "montevideo",
+      "name": "Montevideo",
+      "country": "Uruguay",
+      "countryCode": "UY",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -34.9011,
+      "longitude": -56.1645,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "BEACH"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "montevideo",
+        "montevideo rambla"
+      ]
+    },
+    {
+      "id": "sao_paulo",
+      "name": "São Paulo",
+      "country": "Brazil",
+      "countryCode": "BR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -23.5558,
+      "longitude": -46.6396,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "sao paulo",
+        "sao paulo skyline"
+      ]
+    },
+    {
+      "id": "valparaiso",
+      "name": "Valparaíso",
+      "country": "Chile",
+      "countryCode": "CL",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -33.0472,
+      "longitude": -71.6127,
+      "tags": [
+        "PHOTOGRAPHY",
+        "HISTORY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "valparaiso",
+        "valparaiso chile"
+      ]
+    },
+    {
+      "id": "ushuaia",
+      "name": "Ushuaia",
+      "country": "Argentina",
+      "countryCode": "AR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -54.8019,
+      "longitude": -68.303,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "ushuaia",
+        "ushuaia beagle channel"
+      ]
+    },
+    {
+      "id": "salta",
+      "name": "Salta",
+      "country": "Argentina",
+      "countryCode": "AR",
+      "continent": "SOUTH_AMERICA",
+      "latitude": -24.7821,
+      "longitude": -65.4232,
+      "tags": [
+        "HISTORY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        8,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "salta argentina",
+        "salta cathedral"
+      ]
+    },
+    {
+      "id": "wellington",
+      "name": "Wellington",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "continent": "OCEANIA",
+      "latitude": -41.2865,
+      "longitude": 174.7762,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "wellington",
+        "wellington cable car"
+      ]
+    },
+    {
+      "id": "christchurch",
+      "name": "Christchurch",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "continent": "OCEANIA",
+      "latitude": -43.5321,
+      "longitude": 172.6362,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "christchurch",
+        "christchurch new zealand"
+      ]
+    },
+    {
+      "id": "perth",
+      "name": "Perth",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -31.9505,
+      "longitude": 115.8605,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        9,
+        10,
+        11,
+        3,
+        4,
+        5
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "perth",
+        "perth kings park"
+      ]
+    },
+    {
+      "id": "adelaide",
+      "name": "Adelaide",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -34.9285,
+      "longitude": 138.6007,
+      "tags": [
+        "CITY",
+        "FOOD",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "adelaide",
+        "adelaide city"
+      ]
+    },
+    {
+      "id": "cairns",
+      "name": "Cairns",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -16.9186,
+      "longitude": 145.7781,
+      "tags": [
+        "NATURE",
+        "ADVENTURE",
+        "BEACH"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "cairns",
+        "great barrier reef"
+      ]
+    },
+    {
+      "id": "hobart",
+      "name": "Hobart",
+      "country": "Australia",
+      "countryCode": "AU",
+      "continent": "OCEANIA",
+      "latitude": -42.8821,
+      "longitude": 147.3272,
+      "tags": [
+        "HISTORY",
+        "FOOD",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "hobart",
+        "hobart tasmania"
+      ]
+    },
+    {
+      "id": "papeete",
+      "name": "Papeete",
+      "country": "French Polynesia",
+      "countryCode": "PF",
+      "continent": "OCEANIA",
+      "latitude": -17.5516,
+      "longitude": -149.5585,
+      "tags": [
+        "BEACH",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "papeete",
+        "tahiti"
+      ]
+    },
+    {
+      "id": "havana",
+      "name": "Havana",
+      "country": "Cuba",
+      "countryCode": "CU",
+      "continent": "NORTH_AMERICA",
+      "latitude": 23.1136,
+      "longitude": -82.3666,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "havana",
+        "havana malecon"
+      ]
+    },
+    {
+      "id": "cancun",
+      "name": "Cancún",
+      "country": "Mexico",
+      "countryCode": "MX",
+      "continent": "NORTH_AMERICA",
+      "latitude": 21.1619,
+      "longitude": -86.8515,
+      "tags": [
+        "BEACH",
+        "HISTORY",
+        "NIGHTLIFE"
+      ],
+      "recommendedDaysMin": 3,
+      "recommendedDaysMax": 4,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "cancun",
+        "cancun beach"
+      ]
+    },
+    {
+      "id": "san_jose",
+      "name": "San José",
+      "country": "Costa Rica",
+      "countryCode": "CR",
+      "continent": "NORTH_AMERICA",
+      "latitude": 9.9281,
+      "longitude": -84.0907,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "san jose costa rica",
+        "costa rica"
+      ]
+    },
+    {
+      "id": "panama_city",
+      "name": "Panama City",
+      "country": "Panama",
+      "countryCode": "PA",
+      "continent": "NORTH_AMERICA",
+      "latitude": 8.9824,
+      "longitude": -79.5199,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "NATURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "panama city",
+        "panama canal"
+      ]
+    },
+    {
+      "id": "antigua",
+      "name": "Antigua Guatemala",
+      "country": "Guatemala",
+      "countryCode": "GT",
+      "continent": "NORTH_AMERICA",
+      "latitude": 14.5586,
+      "longitude": -90.7295,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "antigua guatemala",
+        "antigua guatemala arch"
+      ]
+    },
+    {
+      "id": "washington_dc",
+      "name": "Washington, D.C.",
+      "country": "United States",
+      "countryCode": "US",
+      "continent": "NORTH_AMERICA",
+      "latitude": 38.9072,
+      "longitude": -77.0369,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 5,
+      "imageKeywords": [
+        "washington dc",
+        "washington dc monuments"
+      ]
+    },
+    {
+      "id": "ulaanbaatar",
+      "name": "Ulaanbaatar",
+      "country": "Mongolia",
+      "countryCode": "MN",
+      "continent": "ASIA",
+      "latitude": 47.8864,
+      "longitude": 106.9057,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "ulaanbaatar",
+        "ulaanbaatar city"
+      ]
+    },
+    {
+      "id": "samarkand",
+      "name": "Samarkand",
+      "country": "Uzbekistan",
+      "countryCode": "UZ",
+      "continent": "ASIA",
+      "latitude": 39.627,
+      "longitude": 66.975,
+      "tags": [
+        "HISTORY",
+        "PHOTOGRAPHY",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 3,
+      "imageKeywords": [
+        "samarkand",
+        "registan"
+      ]
+    },
+    {
+      "id": "almaty",
+      "name": "Almaty",
+      "country": "Kazakhstan",
+      "countryCode": "KZ",
+      "continent": "ASIA",
+      "latitude": 43.222,
+      "longitude": 76.8512,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10,
+        1,
+        2
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "almaty",
+        "almaty mountains"
+      ]
+    },
+    {
+      "id": "baku",
+      "name": "Baku",
+      "country": "Azerbaijan",
+      "countryCode": "AZ",
+      "continent": "ASIA",
+      "latitude": 40.4093,
+      "longitude": 49.8671,
+      "tags": [
+        "CITY",
+        "HISTORY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "baku",
+        "baku flame towers"
+      ]
+    },
+    {
+      "id": "yerevan",
+      "name": "Yerevan",
+      "country": "Armenia",
+      "countryCode": "AM",
+      "continent": "ASIA",
+      "latitude": 40.1792,
+      "longitude": 44.4991,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 1,
+      "transportScore": 4,
+      "imageKeywords": [
+        "yerevan",
+        "yerevan cascade"
+      ]
+    },
+    {
+      "id": "muscat",
+      "name": "Muscat",
+      "country": "Oman",
+      "countryCode": "OM",
+      "continent": "ASIA",
+      "latitude": 23.588,
+      "longitude": 58.3829,
+      "tags": [
+        "CITY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "budgetLevel": 3,
+      "transportScore": 3,
+      "imageKeywords": [
+        "muscat",
+        "muscat oman"
+      ]
+    },
+    {
+      "id": "amman",
+      "name": "Amman",
+      "country": "Jordan",
+      "countryCode": "JO",
+      "continent": "ASIA",
+      "latitude": 31.9454,
+      "longitude": 35.9284,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "FOOD"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "budgetLevel": 2,
+      "transportScore": 3,
+      "imageKeywords": [
+        "amman",
+        "amman citadel"
+      ]
+    },
+    {
+      "id": "paro",
+      "name": "Paro",
+      "country": "Bhutan",
+      "countryCode": "BT",
+      "continent": "ASIA",
+      "latitude": 27.4287,
+      "longitude": 89.4164,
+      "tags": [
+        "NATURE",
+        "HISTORY",
+        "ADVENTURE"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "budgetLevel": 3,
+      "transportScore": 2,
+      "imageKeywords": [
+        "paro",
+        "tigers nest bhutan"
+      ]
+    },
+    {
+      "id": "tallinn",
+      "name": "Tallinn",
+      "country": "Estonia",
+      "countryCode": "EE",
+      "continent": "EUROPE",
+      "latitude": 59.437,
+      "longitude": 24.7536,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        12
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "tallinn",
+        "tallinn old town"
+      ]
+    },
+    {
+      "id": "riga",
+      "name": "Riga",
+      "country": "Latvia",
+      "countryCode": "LV",
+      "continent": "EUROPE",
+      "latitude": 56.9496,
+      "longitude": 24.1052,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "riga",
+        "riga old town"
+      ]
+    },
+    {
+      "id": "vilnius",
+      "name": "Vilnius",
+      "country": "Lithuania",
+      "countryCode": "LT",
+      "continent": "EUROPE",
+      "latitude": 54.6872,
+      "longitude": 25.2797,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "vilnius",
+        "vilnius old town"
+      ]
+    },
+    {
+      "id": "ljubljana",
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "countryCode": "SI",
+      "continent": "EUROPE",
+      "latitude": 46.0569,
+      "longitude": 14.5058,
+      "tags": [
+        "CITY",
+        "NATURE",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "ljubljana",
+        "ljubljana castle"
+      ]
+    },
+    {
+      "id": "salzburg",
+      "name": "Salzburg",
+      "country": "Austria",
+      "countryCode": "AT",
+      "continent": "EUROPE",
+      "latitude": 47.8095,
+      "longitude": 13.055,
+      "tags": [
+        "HISTORY",
+        "CITY",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 1,
+      "recommendedDaysMax": 2,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "salzburg",
+        "salzburg fortress"
+      ]
+    },
+    {
+      "id": "san_sebastian",
+      "name": "San Sebastián",
+      "country": "Spain",
+      "countryCode": "ES",
+      "continent": "EUROPE",
+      "latitude": 43.3183,
+      "longitude": -1.9812,
+      "tags": [
+        "FOOD",
+        "BEACH",
+        "CITY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 3,
+      "transportScore": 4,
+      "imageKeywords": [
+        "san sebastian",
+        "la concha beach"
+      ]
+    },
+    {
+      "id": "valletta",
+      "name": "Valletta",
+      "country": "Malta",
+      "countryCode": "MT",
+      "continent": "EUROPE",
+      "latitude": 35.8989,
+      "longitude": 14.5146,
+      "tags": [
+        "HISTORY",
+        "BEACH",
+        "PHOTOGRAPHY"
+      ],
+      "recommendedDaysMin": 2,
+      "recommendedDaysMax": 3,
+      "bestMonths": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "budgetLevel": 2,
+      "transportScore": 4,
+      "imageKeywords": [
+        "valletta",
+        "valletta malta"
       ]
     }
   ]
