@@ -55,7 +55,6 @@
 ./gradlew.bat testDebugUnitTest  # 单元测试
 ```
 
-Release 签名:在根目录放置 `keystore.properties`(含 `storeFile` / `storePassword` / `keyAlias` / `keyPassword` 四字段)与自己的 `keystore.jks`;不存在时自动回落 debug 签名。签名材料已列入 `.gitignore`,请勿提交。
 
 ## 项目结构
 
