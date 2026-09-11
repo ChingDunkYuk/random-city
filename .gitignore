@@ -9,3 +9,7 @@
 .cxx
 local.properties
 app/build
+
+# Release 签名材料(仅本机,不入库)
+/keystore.jks
+/keystore.properties
