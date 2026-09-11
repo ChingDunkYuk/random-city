@@ -7,6 +7,7 @@ import com.randomcity.app.data.repository.SettingsRepository
 import com.randomcity.app.domain.model.City
 import com.randomcity.app.domain.model.CityFilter
 import com.randomcity.app.domain.model.TravelTag
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -32,6 +33,10 @@ class HomeViewModel(
     /** Featured 精选城市(v0.7)。 */
     private val _featured = MutableStateFlow<List<City>>(emptyList())
     val featured: StateFlow<List<City>> = _featured.asStateFlow()
+
+    /** 洗牌滚动序列(v0.9.5,最后一个是抽中城市),空表=不在洗牌。 */
+    private val _shuffleNames = MutableStateFlow<List<String>>(emptyList())
+    val shuffleNames: StateFlow<List<String>> = _shuffleNames.asStateFlow()
 
     init {
         viewModelScope.launch {
@@ -64,11 +69,23 @@ class HomeViewModel(
             _rolling.value = true
             _emptyResult.value = false
             try {
-                val picked = cityRepository.rollRandomCity(
-                    overrideFilter ?: filter.value,
-                    surprise
-                )
+                val effectiveFilter = overrideFilter ?: filter.value
+                val picked = cityRepository.rollRandomCity(effectiveFilter, surprise)
                 if (picked != null) {
+                    // 洗牌动画(v0.9.5):9 个随机城市名 + 抽中城市名,播完再导航
+                    val poolIds = if (surprise) {
+                        cityRepository.getAllIds()
+                    } else {
+                        cityRepository.getFilteredIds(effectiveFilter)
+                    }
+                    val decoys = poolIds
+                        .filter { it != picked }
+                        .shuffled()
+                        .take(SHUFFLE_DECOY_COUNT)
+                    val sequence = cityRepository.getLocalNamesByIds(decoys + picked)
+                    _shuffleNames.value = sequence
+                    delay(SHUFFLE_DURATION_MS)
+                    _shuffleNames.value = emptyList()
                     onPicked(picked)
                 } else {
                     _emptyResult.value = true
@@ -84,5 +101,11 @@ class HomeViewModel(
         viewModelScope.launch {
             settingsRepository.setCityFilter(filter)
         }
+    }
+
+    companion object {
+        /** 洗牌:干扰城市名个数 / 总时长(UI 滚动节奏与之匹配,合计约 950ms)。 */
+        const val SHUFFLE_DECOY_COUNT = 9
+        const val SHUFFLE_DURATION_MS = 950L
     }
 }

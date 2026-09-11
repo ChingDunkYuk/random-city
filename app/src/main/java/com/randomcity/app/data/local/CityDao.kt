@@ -26,4 +26,14 @@ interface CityDao {
 
     @Query("SELECT * FROM cities WHERE id = :id")
     suspend fun getById(id: String): CityEntity?
+
+    /** 批量取城市中文名(v0.9.5 洗牌动画)。 */
+    @Query("SELECT id, localName FROM cities WHERE id IN (:ids)")
+    suspend fun getIdNames(ids: List<String>): List<CityIdName>
 }
+
+/** id + 中文名投影(洗牌动画批量查询用)。 */
+data class CityIdName(
+    val id: String,
+    val localName: String
+)

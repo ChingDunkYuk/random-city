@@ -61,6 +61,12 @@ class CityRepository(
         cityDao.getById(id)?.toDomain()
     }
 
+    /** 批量取城市中文名(v0.9.5 洗牌动画);顺序与入参 ids 一致。 */
+    suspend fun getLocalNamesByIds(ids: List<String>): List<String> = withContext(Dispatchers.IO) {
+        val byId = cityDao.getIdNames(ids).associate { it.id to it.localName }
+        ids.mapNotNull { byId[it] }
+    }
+
     /**
      * 按筛选条件取候选城市 id(103 城内存过滤,成本可忽略)。
      */

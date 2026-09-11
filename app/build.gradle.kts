@@ -14,8 +14,8 @@ android {
         applicationId = "com.randomcity.app"
         minSdk = 28
         targetSdk = 36
-        versionCode = 7
-        versionName = "0.9.0"
+        versionCode = 8
+        versionName = "0.9.5"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

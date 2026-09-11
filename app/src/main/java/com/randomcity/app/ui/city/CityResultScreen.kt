@@ -3,6 +3,9 @@ package com.randomcity.app.ui.city
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -49,6 +52,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -57,9 +61,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -85,6 +92,7 @@ fun CityResultScreen(
     val imageUrl by viewModel.imageUrl.collectAsState()
     val weather by viewModel.weather.collectAsState()
     val context = LocalContext.current
+    val haptic = LocalHapticFeedback.current
 
     val city = uiState.city
     if (uiState.loading || city == null) {
@@ -100,49 +108,86 @@ fun CityResultScreen(
                 .weight(1f)
                 .verticalScroll(rememberScrollState())
         ) {
-            CityHeroHeader(
-                city = city,
-                isSaved = isSaved,
-                imageUrl = imageUrl,
-                onBack = onBack,
-                onToggleSave = viewModel::toggleSave,
-                onShare = { shareCity(context, city) }
-            )
+            // Reveal 动画(v0.9.5):单次 800ms,三组错峰淡入上滑
+            val reveal = remember { Animatable(0f) }
+            LaunchedEffect(city.id) {
+                reveal.snapTo(0f)
+                reveal.animateTo(1f, tween(800, easing = FastOutSlowInEasing))
+            }
+            val p = reveal.value
+
+            // 组 1:Hero(0→0.4)
+            Box(
+                modifier = Modifier.graphicsLayer {
+                    val g = revealAt(p, 0f, 0.4f)
+                    alpha = g
+                    translationY = (1f - g) * 24.dp.toPx()
+                }
+            ) {
+                CityHeroHeader(
+                    city = city,
+                    isSaved = isSaved,
+                    imageUrl = imageUrl,
+                    onBack = onBack,
+                    onToggleSave = {
+                        haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                        viewModel.toggleSave()
+                    },
+                    onShare = { shareCity(context, city) }
+                )
+            }
 
             Column(modifier = Modifier.padding(horizontal = 20.dp)) {
-                Spacer(modifier = Modifier.height(14.dp))
+                // 组 2:简介 + QuickInfo + 天气行(0.25→0.65)
+                Column(
+                    modifier = Modifier.graphicsLayer {
+                        val g = revealAt(p, 0.25f, 0.65f)
+                        alpha = g
+                        translationY = (1f - g) * 20.dp.toPx()
+                    }
+                ) {
+                    Spacer(modifier = Modifier.height(14.dp))
 
-                // 一句话介绍(计划§14.1)
-                Text(
-                    text = city.description,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
+                    // 一句话介绍(计划§14.1)
+                    Text(
+                        text = city.description,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
 
-                Spacer(modifier = Modifier.height(14.dp))
+                    Spacer(modifier = Modifier.height(14.dp))
 
-                // Quick Info:单卡四列一行,避免纵向堆叠(计划§14.2)
-                QuickInfoRow(city)
+                    // Quick Info:单卡四列一行,避免纵向堆叠(计划§14.2)
+                    QuickInfoRow(city)
 
-                // 当前天气(v0.9,计划§42):Optional,失败整行隐藏
-                weather?.let { w ->
-                    Spacer(modifier = Modifier.height(10.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            imageVector = Icons.Outlined.Cloud,
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.secondary,
-                            modifier = Modifier.size(18.dp)
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = "现在 ${w.temperatureC}°C · ${w.description}",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
+                    // 当前天气(v0.9,计划§42):Optional,失败整行隐藏
+                    weather?.let { w ->
+                        Spacer(modifier = Modifier.height(10.dp))
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(
+                                imageVector = Icons.Outlined.Cloud,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary,
+                                modifier = Modifier.size(18.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "现在 ${w.temperatureC}°C · ${w.description}",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
                     }
                 }
 
+                // 组 3:其余全部 section(0.45→0.85)
+                Column(
+                    modifier = Modifier.graphicsLayer {
+                        val g = revealAt(p, 0.45f, 0.85f)
+                        alpha = g
+                        translationY = (1f - g) * 16.dp.toPx()
+                    }
+                ) {
                 Spacer(modifier = Modifier.height(14.dp))
 
                 // 必去景点(计划§15):chips 紧凑排列
@@ -270,6 +315,7 @@ fun CityResultScreen(
                     }
                 }
                 Spacer(modifier = Modifier.height(20.dp))
+                }
             }
         }
 
@@ -299,6 +345,10 @@ fun CityResultScreen(
         }
     }
 }
+
+/** Reveal 区段插值:progress 在 [start, end] 内从 0 走到 1。 */
+private fun revealAt(progress: Float, start: Float, end: Float): Float =
+    ((progress - start) / (end - start)).coerceIn(0f, 1f)
 
 /** Quick Info 单卡四列:天数 / 最佳时间 / 预算 / 交通,大圆角轻投影。 */
 @Composable

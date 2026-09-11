@@ -1,5 +1,12 @@
 package com.randomcity.app.ui.home
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -40,6 +47,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,6 +59,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -61,6 +71,7 @@ import com.randomcity.app.ui.components.CityImage
 import com.randomcity.app.ui.components.EarthVisual
 import com.randomcity.app.ui.components.SectionTitle
 import com.randomcity.app.util.CityVisuals
+import kotlinx.coroutines.delay
 
 /** 心情入口(计划书§34):标签 + 中文名 + 线性图标。 */
 private data class MoodItem(
@@ -87,7 +98,15 @@ fun HomeScreen(
     val filter by viewModel.filter.collectAsState()
     val emptyResult by viewModel.emptyResult.collectAsState()
     val featured by viewModel.featured.collectAsState()
+    val shuffleNames by viewModel.shuffleNames.collectAsState()
     var showFilterSheet by remember { mutableStateOf(false) }
+    val haptic = LocalHapticFeedback.current
+
+    // 洗牌定格震动(v0.9.5):导航前"敲定"一下
+    val onPickedWithHaptic: (String) -> Unit = { id ->
+        haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+        onCityPicked(id)
+    }
 
     Column(
         modifier = Modifier
@@ -117,9 +136,17 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
+        // 洗牌滚动城市名(v0.9.5):固定高度避免布局跳动
+        ShuffleTicker(shuffleNames = shuffleNames)
+
+        Spacer(modifier = Modifier.height(24.dp))
+
         // 核心操作:随机(屏幕中下部,单手可达)
         Button(
-            onClick = { viewModel.onRandom(onCityPicked) },
+            onClick = {
+                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                viewModel.onRandom(onPickedWithHaptic)
+            },
             enabled = !rolling,
             modifier = Modifier
                 .fillMaxWidth()
@@ -169,7 +196,10 @@ fun HomeScreen(
                 }
             }
             OutlinedButton(
-                onClick = { viewModel.onSurprise(onCityPicked) },
+                onClick = {
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    viewModel.onSurprise(onPickedWithHaptic)
+                },
                 enabled = !rolling,
                 shape = RoundedCornerShape(50)
             ) {
@@ -215,7 +245,10 @@ fun HomeScreen(
                     MoodCard(
                         mood = mood,
                         enabled = !rolling,
-                        onClick = { viewModel.onMood(mood.tag, onCityPicked) }
+                        onClick = {
+                            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                            viewModel.onMood(mood.tag, onPickedWithHaptic)
+                        }
                     )
                 }
             }
@@ -251,6 +284,42 @@ fun HomeScreen(
             onFilterChange = viewModel::setFilter,
             onDismiss = { showFilterSheet = false }
         )
+    }
+}
+
+/** 洗牌滚动城市名(v0.9.5):非空序列时逐条减速滚动,空序列占位同高。 */
+@Composable
+private fun ShuffleTicker(shuffleNames: List<String>) {
+    var displayName by remember { mutableStateOf("") }
+    LaunchedEffect(shuffleNames) {
+        shuffleNames.forEachIndexed { i, name ->
+            displayName = name
+            delay(60L + i * 6L) // 轻微减速,10 项 ≈ 950ms
+        }
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(36.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        if (shuffleNames.isNotEmpty()) {
+            AnimatedContent(
+                targetState = displayName,
+                transitionSpec = {
+                    (slideInVertically { it / 2 } + fadeIn(tween(90))) togetherWith
+                        (slideOutVertically { -it / 2 } + fadeOut(tween(90)))
+                },
+                label = "shuffle"
+            ) { name ->
+                Text(
+                    text = name,
+                    style = MaterialTheme.typography.headlineSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary
+                )
+            }
+        }
     }
 }
 
