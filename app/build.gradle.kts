@@ -52,6 +52,15 @@ android {
         }
     }
 
+    // APK 文件名:RandomCity-v{versionName}.apk
+    applicationVariants.configureEach {
+        val vName = versionName
+        outputs.configureEach {
+            (this as? com.android.build.gradle.internal.api.ApkVariantOutputImpl)
+                ?.outputFileName = "RandomCity-v$vName.apk"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
